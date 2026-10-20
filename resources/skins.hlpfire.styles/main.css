@@ -1229,3 +1229,84 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page .thumbinner {
 	border-radius: 8px;
 }
+
+/* ---- Round 5 ---- */
+
+/* Plain text labels must not get a dark box; only real message widgets do */
+.hlp-page .oo-ui-labelWidget,
+.hlp-page .oo-ui-fieldLayout-help,
+.hlp-page .oo-ui-fieldLayout-messages {
+	background: transparent !important;
+}
+.hlp-page .oo-ui-messageWidget {
+	border-radius: 8px;
+	background: var( --panel2 ) !important;
+}
+.hlp-page .oo-ui-textInputWidget.oo-ui-widget-disabled,
+.hlp-page .oo-ui-textInputWidget.oo-ui-widget-disabled > * {
+	border-radius: 6px;
+}
+
+/* Form submit bar: normal flow, no sticky overlap, no side strips */
+.hlp-page .mw-prefs-buttons,
+.hlp-page .mw-htmlform-submit-buttons,
+.hlp-page .mw-htmlform-ooui .oo-ui-fieldLayout.mw-htmlform-submit-buttons {
+	position: static !important;
+	background: transparent !important;
+	border: 0 !important;
+	border-radius: 0;
+	box-shadow: none !important;
+	padding: 14px 0;
+}
+
+/* Horizontal rules: core paints them light */
+.hlp-page hr {
+	background-color: var( --line ) !important;
+	border: 0;
+	height: 1px;
+}
+
+/* Wikitables: rounded outline without doubled borders */
+.hlp-page .hlp-body table.wikitable {
+	border-collapse: separate !important;
+	border-spacing: 0;
+	border: 1px solid var( --line2 ) !important;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.hlp-page .hlp-body table.wikitable > * > tr > td,
+.hlp-page .hlp-body table.wikitable > * > tr > th {
+	border-color: var( --line ) !important;
+	border-width: 0 1px 1px 0 !important;
+}
+.hlp-page .hlp-body table.wikitable > * > tr > :last-child {
+	border-right-width: 0 !important;
+}
+.hlp-page .hlp-body table.wikitable > :last-child > tr:last-child > * {
+	border-bottom-width: 0 !important;
+}
+
+/* Boxes with an inline border (Veteran Comments, notes): rounded */
+.hlp-page .hlp-body div[style*="border"],
+.hlp-page .hlp-body p[style*="border"] {
+	border-radius: 8px;
+}
+.hlp-page .hlp-body table[style*="border"][style*="solid"] {
+	border-radius: 8px;
+	border-collapse: separate !important;
+	border-spacing: 0;
+}
+
+/* Canon / non-canon notices: thin black border and no fill become glowing cards */
+.hlp-page [style*="1px solid #000" i],
+.hlp-page [style*="1px solid black" i],
+.hlp-page [style*="1px #000" i],
+.hlp-page [style*="1px black" i],
+.hlp-page [style*="solid 1px #000" i],
+.hlp-page [style*="solid 1px black" i] {
+	background: var( --panel ) !important;
+	border: 1px solid var( --line2 ) !important;
+	border-radius: 10px;
+	box-shadow: 0 0 16px rgba( var( --glow ), 0.25 );
+	padding: 8px 14px;
+}
