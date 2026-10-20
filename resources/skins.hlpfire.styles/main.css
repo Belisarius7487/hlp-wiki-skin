@@ -913,3 +913,126 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page table[style*="background:\20 #000000" i] {
 	display: flow-root;
 }
+
+/* ---- Batch: light default blocks on common page types ---- */
+
+/* File pages: tab bar, file history table, thumbnails */
+.hlp-page #filetoc,
+.hlp-page .mw-filepage-resolutioninfo {
+	background: var( --panel );
+	border: 1px solid var( --line );
+	color: var( --text );
+	border-radius: 6px;
+}
+.hlp-page table.filehistory,
+.hlp-page table.filehistory td,
+.hlp-page table.filehistory th {
+	background: var( --panel );
+	color: var( --text );
+	border-color: var( --line );
+}
+.hlp-page table.filehistory th {
+	background: var( --active );
+	color: var( --text2 );
+}
+.hlp-page table.filehistory td img,
+.hlp-page .thumb img,
+.hlp-page .thumbimage {
+	background: var( --panel2 );
+	border-color: var( --line );
+}
+
+/* Generic data tables and boxes from core and extensions */
+.hlp-page table.mw-datatable,
+.hlp-page table.mw-datatable td,
+.hlp-page table.mw-datatable th,
+.hlp-page .toccolours,
+.hlp-page .mw-collapsible-content,
+.hlp-page .mw-pager-body,
+.hlp-page table.mw-search-results,
+.hlp-page .mw-search-result-heading,
+.hlp-page .searchresult {
+	background: var( --panel );
+	color: var( --text );
+	border-color: var( --line );
+}
+.hlp-page table.mw-datatable th {
+	background: var( --active );
+	color: var( --text2 );
+}
+.hlp-page table.wikitable td {
+	background: var( --panel );
+	color: var( --text );
+	border-color: var( --line );
+}
+
+/* Diff view (comparing revisions) */
+.hlp-page table.diff,
+.hlp-page table.diff td {
+	background: var( --panel2 );
+	color: var( --text );
+	border-color: var( --line );
+}
+.hlp-page td.diff-addedline {
+	background: rgba( 60, 140, 80, 0.18 );
+}
+.hlp-page td.diff-deletedline {
+	background: rgba( 190, 60, 60, 0.20 );
+}
+.hlp-page td.diff-context {
+	background: var( --panel );
+}
+.hlp-page td.diff-marker,
+.hlp-page .diff-lineno {
+	color: var( --muted );
+}
+.hlp-page .diffchange {
+	color: var( --text2 );
+	background: rgba( 255, 255, 255, 0.12 );
+}
+
+/* Forms, messages, preferences */
+.hlp-page .mw-htmlform-ooui-wrapper,
+.hlp-page .mw-htmlform fieldset,
+.hlp-page fieldset.oo-ui-fieldsetLayout,
+.hlp-page .oo-ui-panelLayout-framed,
+.hlp-page .oo-ui-panelLayout-expanded,
+.hlp-page .oo-ui-indexLayout-stackLayout,
+.hlp-page .oo-ui-tabPanelLayout {
+	background: var( --panel );
+	color: var( --text );
+	border-color: var( --line );
+}
+.hlp-page .oo-ui-menuLayout-menu,
+.hlp-page .oo-ui-tabSelectWidget,
+.hlp-page .oo-ui-tabOptionWidget {
+	background: var( --panel2 );
+	color: var( --text2 );
+}
+.hlp-page .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
+	background: var( --active );
+}
+.hlp-page .cdx-message,
+.hlp-page .mw-message-box,
+.hlp-page .errorbox,
+.hlp-page .warningbox,
+.hlp-page .successbox {
+	background: var( --panel );
+	color: var( --text );
+	border-color: var( --line2 );
+}
+.hlp-page .errorbox,
+.hlp-page .cdx-message--error {
+	border-color: #c04a4a;
+}
+.hlp-page .mw-ui-button,
+.hlp-page .mw-ui-button:visited {
+	background: var( --panel );
+	color: var( --text2 );
+	border: 1px solid var( --line2 );
+}
+.hlp-page .mw-ui-button.mw-ui-progressive {
+	background: var( --accent );
+	color: #fff;
+	border-color: var( --accent );
+}
