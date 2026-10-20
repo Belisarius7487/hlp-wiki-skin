@@ -4,6 +4,7 @@
 }}
 <script>
 /* Apply the saved colour scheme before first paint to avoid a flash. */
+document.documentElement.classList.add( 'hlp-js' );
 try { if ( localStorage.getItem( 'hlp-wiki-scheme' ) === 'void' ) { document.documentElement.classList.add( 'hlp-void' ); } } catch ( e ) {}
 </script>
 <div class="hlp-page">

@@ -1310,3 +1310,22 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 	box-shadow: 0 0 16px rgba( var( --glow ), 0.25 );
 	padding: 8px 14px;
 }
+
+/* ---- No flash of the unstyled table of contents ----
+ * With JavaScript the TOC is hidden in the article until main.js moves it to the side panel.
+ * If the script never runs, the TOC appears in the article after 3 seconds. */
+html.hlp-js .hlp-body #toc,
+html.hlp-js .hlp-body #mw-toc,
+html.hlp-js .hlp-body .toc {
+	visibility: hidden;
+	max-height: 0;
+	overflow: hidden;
+	margin: 0;
+	animation: hlp-toc-fallback 0s 3s forwards;
+}
+@keyframes hlp-toc-fallback {
+	to {
+		visibility: visible;
+		max-height: none;
+	}
+}
