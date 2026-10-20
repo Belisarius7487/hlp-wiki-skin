@@ -907,3 +907,9 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 	display: block;
 	border-radius: 6px;
 }
+
+/* The wrapper is its own formatting context, so it sits beside the floated navigation box. */
+.hlp-page table[style*="background:#000000" i],
+.hlp-page table[style*="background:\20 #000000" i] {
+	display: flow-root;
+}
