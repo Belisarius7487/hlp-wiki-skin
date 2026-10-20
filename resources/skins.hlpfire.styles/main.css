@@ -816,3 +816,25 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 #pagehistory li.selected abbr {
 	color: var(--text2) !important;
 }
+
+/* ---- Interwiki links (e.g. Wikipedia links in templates) use the theme link colour ---- */
+.hlp-page a.extiw,
+.hlp-page a.extiw:visited {
+	color: var( --link );
+}
+.hlp-page a.extiw:hover {
+	color: var( --linkhov );
+}
+
+/* ---- Image frames in current MediaWiki markup (figure elements) ---- */
+.hlp-page figure[typeof~='mw:File/Thumb'],
+.hlp-page figure[typeof~='mw:File/Frame'] {
+	background: var( --panel );
+	border: 1px solid var( --line );
+	color: var( --text );
+}
+.hlp-page figure[typeof~='mw:File/Thumb'] > figcaption,
+.hlp-page figure[typeof~='mw:File/Frame'] > figcaption {
+	background: transparent;
+	color: var( --muted );
+}
