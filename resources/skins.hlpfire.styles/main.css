@@ -1688,3 +1688,17 @@ html.hlp-void .hlp-page [style*="#811" i],
 html.hlp-void .hlp-page [style*="#d33" i] {
 	border-color: var( --line2 ) !important;
 }
+
+/* ---- Coloured boxes drawn as tables: always rounded ---- */
+.hlp-page .hlp-body table[style*="background" i]:not( :has( table ) ):not( [cellpadding="8"] ) {
+	border-radius: 10px;
+	border-collapse: separate !important;
+	border-spacing: 0;
+	overflow: hidden;
+}
+
+/* ---- Void: links inside coloured boxes stand out from the box text ---- */
+html.hlp-void .hlp-page [style*="background" i] a:not( .new ):not( .mw-selflink ),
+html.hlp-void .hlp-page [bgcolor] a:not( .new ):not( .mw-selflink ) {
+	color: var( --linkhov );
+}
