@@ -1520,3 +1520,12 @@ html.hlp-void .hlp-page [style*="color: #D44" i]:not( a ),
 html.hlp-void .hlp-page [style*="#D44" i] *:not( a ) {
 	color: var( --hi ) !important;
 }
+
+/* Void notice boxes: lighter text, links underlined so they stand out */
+html.hlp-void .hlp-page [style*="#D44" i]:not( a ),
+html.hlp-void .hlp-page [style*="#D44" i] *:not( a ) {
+	color: var( --text2 ) !important;
+}
+html.hlp-void .hlp-page [style*="#D44" i] a {
+	text-decoration: underline;
+}
