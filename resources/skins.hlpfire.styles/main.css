@@ -1156,3 +1156,76 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .suggestions-result span {
 	color: var( --text2 );
 }
+
+/* ---- Round 4: rounded boxes, spacing, help icon, remaining white blocks ---- */
+
+/* Template boxes with the red border (Main nav, portals, infoboxes) become rounded cards */
+.hlp-page .hlp-body table[style*="AA2020" i],
+.hlp-page .hlp-body table.infobox,
+.hlp-page .hlp-body table.toccolours {
+	border-radius: 10px;
+	border-collapse: separate !important;
+	border-spacing: 0;
+	overflow: hidden;
+	border-color: var( --line2 ) !important;
+}
+/* Comfortable cell padding (:where keeps this easy to override by specific rules above) */
+:where( .hlp-page .hlp-body table[style*="AA2020" i] ) > * > tr > td,
+:where( .hlp-page .hlp-body table[style*="AA2020" i] ) > * > tr > th,
+:where( .hlp-page .hlp-body table.infobox ) > * > tr > td,
+:where( .hlp-page .hlp-body table.infobox ) > * > tr > th {
+	padding: 6px 14px;
+}
+
+/* Help icon next to "Help" links was dark on dark */
+.hlp-page .mw-helplink-icon,
+.hlp-page .mw-helplink img {
+	filter: invert( 1 ) brightness( 1.2 );
+	opacity: 0.85;
+}
+
+/* Special:SpecialPages legend and similar notes */
+.hlp-page .mw-specialpages-notes,
+.hlp-page [class^="mw-specialpages"] {
+	background: var( --panel );
+	color: var( --text );
+	border: 1px solid var( --line );
+	border-radius: 8px;
+	padding: 8px 14px;
+}
+
+/* Disabled / info fields and message widgets */
+.hlp-page .oo-ui-textInputWidget.oo-ui-widget-disabled,
+.hlp-page .oo-ui-textInputWidget.oo-ui-widget-disabled > *,
+.hlp-page .oo-ui-messageWidget,
+.hlp-page .oo-ui-labelWidget {
+	background: var( --panel2 ) !important;
+	color: var( --muted ) !important;
+	border-color: var( --line ) !important;
+}
+
+/* Submit bar in preferences / forms: solid bar instead of a see-through one */
+.hlp-page .mw-prefs-buttons,
+.hlp-page .mw-htmlform-submit-buttons,
+.hlp-page .mw-htmlform-ooui .oo-ui-fieldLayout.mw-htmlform-submit-buttons {
+	background: var( --bg ) !important;
+	padding: 12px 14px;
+	border-top: 1px solid var( --line );
+	border-radius: 0 0 8px 8px;
+}
+
+/* Image frames: no white borders */
+.hlp-page figure[typeof~='mw:File/Thumb'],
+.hlp-page figure[typeof~='mw:File/Frame'],
+.hlp-page figure[typeof~='mw:File/Thumb'] > figcaption,
+.hlp-page .thumbinner {
+	border-color: var( --line2 ) !important;
+}
+.hlp-page figure .mw-file-element,
+.hlp-page .thumbimage {
+	border-color: var( --line ) !important;
+}
+.hlp-page figure[typeof~='mw:File/Thumb'],
+.hlp-page .thumbinner {
+	border-radius: 8px;
+}
