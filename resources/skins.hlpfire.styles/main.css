@@ -1904,3 +1904,18 @@ html.hlp-wide .hlp-main {
 .hlp-page .hlp-body :is( h1, h2, h3, h4, h5, h6 ) span:not( .mw-editsection ):not( .mw-editsection-bracket ):not( .mw-editsection-divider ) {
 	color: var( --text2 ) !important;
 }
+
+/* "This feature requires FreeSpace Open" notice (#251515 background): Void colours and breathing room */
+html.hlp-void .hlp-page [style*="background-color:\20 #251515" i],
+html.hlp-void .hlp-page [style*="background-color:#251515" i],
+html.hlp-void .hlp-page [style*="background:\20 #251515" i],
+html.hlp-void .hlp-page [style*="background:#251515" i] {
+	background: var( --panel ) !important;
+}
+html.hlp-void .hlp-page [style*="#251515" i][style*="#FFDDDD" i],
+html.hlp-void .hlp-page [style*="#251515" i][style*="#FFDDDD" i] * {
+	color: var( --text2 ) !important;
+}
+.hlp-page [style*="#251515" i] {
+	margin-bottom: 1.5em !important;
+}
