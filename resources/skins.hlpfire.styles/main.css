@@ -1849,3 +1849,8 @@ html.hlp-void .hlp-page [bgcolor] a:not( .new ):not( .mw-selflink ) {
 	overflow: hidden;
 	border: 1px solid var( --line2 ) !important;
 }
+
+/* Guide navigation boxes (e.g. fs2_open on Linux) use a pale khaki border */
+.hlp-page [style*="#C5C58B" i] {
+	border-color: var( --line2 ) !important;
+}
