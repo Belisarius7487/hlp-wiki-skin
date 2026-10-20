@@ -1887,3 +1887,8 @@ html.hlp-wide .hlp-main {
 	flex: 1 1 0;
 	min-width: 0;
 }
+
+/* Tables without any cell (e.g. an empty {| |} in a template) are not shown */
+.hlp-page .hlp-body table:not( :has( td, th ) ) {
+	display: none !important;
+}
