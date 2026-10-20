@@ -1897,3 +1897,10 @@ html.hlp-wide .hlp-main {
 .hlp-page .hlp-body table:has( td:empty ):not( :has( th ) ):not( :has( td:not( :empty ) ) ) {
 	display: none !important;
 }
+
+/* Headings always use the theme text colour, even if a template sets a fixed (e.g. black) colour */
+.hlp-page .hlp-body :is( h1, h2, h3, h4, h5, h6 ),
+.hlp-page .hlp-body :is( h1, h2, h3, h4, h5, h6 ) .mw-headline,
+.hlp-page .hlp-body :is( h1, h2, h3, h4, h5, h6 ) span:not( .mw-editsection ):not( .mw-editsection-bracket ):not( .mw-editsection-divider ) {
+	color: var( --text2 ) !important;
+}
