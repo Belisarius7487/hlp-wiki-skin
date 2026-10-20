@@ -1415,3 +1415,14 @@ html.hlp-void .hlp-page [style*="#202020" i] {
 .hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td[rowspan] a::after {
 	content: none;
 }
+
+/* Mission navigation: cells without a link (e.g. no loop mission) disappear; text is centred vertically */
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td {
+	vertical-align: middle;
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td:not( :has( a ) ) {
+	background: none;
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+}
