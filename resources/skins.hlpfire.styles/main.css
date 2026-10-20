@@ -787,3 +787,32 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 	color: var(--muted) !important;
 	background: transparent !important;
 }
+
+/* ---- Popups in general (calendar etc.): dark panel, transparent children ---- */
+.oo-ui-popupWidget-popup,
+.oo-ui-popupWidget-body,
+.oo-ui-popupWidget-anchor::before,
+.oo-ui-popupWidget-anchor::after {
+	background: var(--panel2) !important;
+	border-color: var(--line2) !important;
+}
+.oo-ui-popupWidget-popup *:not(.oo-ui-indicatorElement-indicator):not(.oo-ui-iconElement-icon) {
+	background-color: transparent !important;
+	color: var(--text2) !important;
+	border-color: var(--line2) !important;
+}
+.oo-ui-popupWidget-popup button:hover,
+.oo-ui-popupWidget-popup [class*="-item"]:hover,
+.oo-ui-popupWidget-popup [class*="-day"]:hover,
+.oo-ui-popupWidget-popup [class*="selected"] {
+	background-color: var(--active) !important;
+}
+
+/* ---- Highlighted rows in revision history: readable text ---- */
+#pagehistory li.selected,
+#pagehistory li.selected .comment,
+#pagehistory li.selected .history-size,
+#pagehistory li.selected .mw-changeslist-separator,
+#pagehistory li.selected abbr {
+	color: var(--text2) !important;
+}
