@@ -1829,3 +1829,23 @@ html.hlp-void .hlp-page [bgcolor] a:not( .new ):not( .mw-selflink ) {
 	background: transparent;
 	color: var( --muted );
 }
+
+/* File page metadata table: the real class is mw_metadata (underscore) */
+.hlp-page table.mw_metadata,
+.hlp-page .mw_metadata td,
+.hlp-page .mw_metadata th {
+	background: var( --panel ) !important;
+	color: var( --text ) !important;
+	border-color: var( --line ) !important;
+}
+.hlp-page .mw_metadata th {
+	background: var( --active ) !important;
+	color: var( --text2 ) !important;
+}
+.hlp-page table.mw_metadata {
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius: 8px;
+	overflow: hidden;
+	border: 1px solid var( --line2 ) !important;
+}
