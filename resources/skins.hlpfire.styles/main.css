@@ -1375,14 +1375,14 @@ html.hlp-void .hlp-page [style*="#202020" i] {
 
 /* ---- Mission navigation (Template:Mission): previous / walkthrough / next as buttons ----
  * Matched by the template's wrapper table (background:#000000, no nested tables). */
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) {
 	border-collapse: separate !important;
 	border-spacing: 10px 8px;
 	margin: 1em auto;
 	width: auto;
 	background: transparent !important;
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td {
 	background: var( --panel );
 	border: 1px solid var( --line2 );
 	border-radius: 10px;
@@ -1391,36 +1391,36 @@ html.hlp-void .hlp-page [style*="#202020" i] {
 	white-space: nowrap;
 	transition: box-shadow 0.15s, background 0.15s;
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td:hover {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td:hover {
 	background: var( --active );
 	box-shadow: 0 0 14px rgba( var( --glow ), 0.45 );
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td:empty {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td:empty {
 	background: none;
 	border: 0;
 	box-shadow: none;
 	padding: 0;
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td[rowspan] {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td[rowspan] {
 	background: var( --active );
 	font-weight: bold;
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td:first-child a::before {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td:first-child a::before {
 	content: "\2190\00a0";
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td:last-child a::after {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td:last-child a::after {
 	content: "\00a0\2192";
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td[rowspan] a::before,
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td[rowspan] a::after {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td[rowspan] a::before,
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td[rowspan] a::after {
 	content: none;
 }
 
 /* Mission navigation: cells without a link (e.g. no loop mission) disappear; text is centred vertically */
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td {
 	vertical-align: middle;
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td:not( :has( a ) ) {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td:not( :has( a ) ) {
 	background: none;
 	border: 0;
 	box-shadow: none;
@@ -1429,25 +1429,36 @@ html.hlp-void .hlp-page [style*="#202020" i] {
 
 /* Mission navigation: lay the cells out as a flexible row of equal-height buttons
  * (the template's rowspan would otherwise stretch them). */
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) {
 	display: block;
 	width: auto;
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > tbody {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > tbody {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > tbody > tr {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > tbody > tr {
 	display: contents;
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > tbody > tr > td {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > tbody > tr > td {
 	display: block;
 	padding: 10px 22px;
 	min-height: 0;
 }
-.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > tbody > tr > td:not( :has( a ) ) {
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > tbody > tr > td:not( :has( a ) ) {
+	display: none;
+}
+
+/* Mission navigation: the template adds line breaks and empty paragraphs after the links */
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) td br {
+	display: none;
+}
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) td p {
+	margin: 0;
+}
+.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) td p:empty {
 	display: none;
 }
