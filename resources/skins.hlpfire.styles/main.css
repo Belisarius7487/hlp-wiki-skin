@@ -1512,3 +1512,11 @@ html.hlp-void .hlp-page [style*="#D33" i] *:not( a ),
 html.hlp-void .hlp-page [style*="#811" i] *:not( a ) {
 	color: var( --hi ) !important;
 }
+
+/* Void: red text colour #D44 (e.g. Veteran Comments notice) becomes light violet */
+html.hlp-void .hlp-page [style*="color:#D44" i]:not( a ),
+html.hlp-void .hlp-page [style*="color:\20 #D44" i]:not( a ),
+html.hlp-void .hlp-page [style*="color: #D44" i]:not( a ),
+html.hlp-void .hlp-page [style*="#D44" i] *:not( a ) {
+	color: var( --hi ) !important;
+}
