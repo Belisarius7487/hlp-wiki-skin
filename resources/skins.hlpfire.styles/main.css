@@ -1426,3 +1426,28 @@ html.hlp-void .hlp-page [style*="#202020" i] {
 	box-shadow: none;
 	padding: 0;
 }
+
+/* Mission navigation: lay the cells out as a flexible row of equal-height buttons
+ * (the template's rowspan would otherwise stretch them). */
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) {
+	display: block;
+	width: auto;
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > tbody {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > tbody > tr {
+	display: contents;
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > tbody > tr > td {
+	display: block;
+	padding: 10px 22px;
+	min-height: 0;
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > tbody > tr > td:not( :has( a ) ) {
+	display: none;
+}
