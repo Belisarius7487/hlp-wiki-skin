@@ -1892,3 +1892,8 @@ html.hlp-wide .hlp-main {
 .hlp-page .hlp-body table:not( :has( td, th ) ) {
 	display: none !important;
 }
+
+/* MediaWiki puts one empty cell into an empty {| |} table: hide tables whose cells are all empty */
+.hlp-page .hlp-body table:has( td:empty ):not( :has( th ) ):not( :has( td:not( :empty ) ) ) {
+	display: none !important;
+}
