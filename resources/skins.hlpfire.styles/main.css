@@ -1485,3 +1485,30 @@ html.hlp-void .hlp-page [style*="#811" i],
 html.hlp-void .hlp-page [style*="#522" i] {
 	border-color: var( --accent ) !important;
 }
+
+/* ---- Tables drawn with border="1": theme-coloured lines, rounded outline ---- */
+.hlp-page .hlp-body table[border="1"]:not( [style*="background" i] ) {
+	border-collapse: separate !important;
+	border-spacing: 0;
+	border: 1px solid var( --line2 ) !important;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.hlp-page .hlp-body table[border="1"]:not( [style*="background" i] ) > * > tr > td,
+.hlp-page .hlp-body table[border="1"]:not( [style*="background" i] ) > * > tr > th {
+	border-color: var( --line ) !important;
+	border-width: 0 1px 1px 0 !important;
+}
+.hlp-page .hlp-body table[border="1"]:not( [style*="background" i] ) > * > tr > :last-child {
+	border-right-width: 0 !important;
+}
+.hlp-page .hlp-body table[border="1"]:not( [style*="background" i] ) > :last-child > tr:last-child > * {
+	border-bottom-width: 0 !important;
+}
+
+/* ---- Void: red text in notice boxes becomes light violet (links keep the link colour) ---- */
+html.hlp-void .hlp-page [style*="#D33" i]:not( a ),
+html.hlp-void .hlp-page [style*="#D33" i] *:not( a ),
+html.hlp-void .hlp-page [style*="#811" i] *:not( a ) {
+	color: var( --hi ) !important;
+}
