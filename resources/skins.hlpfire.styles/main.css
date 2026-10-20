@@ -1364,3 +1364,11 @@ html.hlp-js .hlp-body .toc {
 	border-left: 3px solid var( --accent );
 	border-radius: 6px;
 }
+
+/* ---- Void: recolour more template colours (red-brown header, grey rows) ---- */
+html.hlp-void .hlp-page [style*="#3C1E1E" i] {
+	background: var( --active ) !important;
+}
+html.hlp-void .hlp-page [style*="#202020" i] {
+	background: var( --panel ) !important;
+}
