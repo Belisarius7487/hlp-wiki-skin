@@ -1724,3 +1724,108 @@ html.hlp-void .hlp-page [bgcolor] a:not( .new ):not( .mw-selflink ) {
 .hlp-page ul.gallery .thumb img {
 	border-radius: 4px;
 }
+
+/* ---- Complete sweep of MediaWiki 1.43 core: light default backgrounds ----
+ * Found by scanning core's stylesheets. Class names are the real ones used by core. */
+
+/* Date input and calendar (correct class names: mw-widget-*, not mw-widgets-*) */
+.mw-widget-dateInputWidget-handle,
+.mw-widget-dateInputWidget .oo-ui-inputWidget-input,
+.mw-widget-calendarWidget,
+.mw-widget-calendarWidget-body,
+.mw-widget-calendarWidget-header,
+.mw-widget-calendarWidget-body-outer-wrapper,
+.mw-widget-calendarWidget-body-wrapper,
+.mw-widget-calendarWidget-old-body,
+.mw-widget-calendarWidget-item,
+.mw-widget-calendarWidget-day,
+.mw-widget-calendarWidget-month,
+.mw-widget-calendarWidget-year,
+.mw-widget-calendarWidget-labelButton,
+.mw-widget-calendarWidget-labelButton .oo-ui-buttonElement-button,
+.mw-widgets-datetime-calendarWidget,
+.mw-widgets-datetime-calendarWidget-cell,
+.mw-widgets-datetime-dateTimeInputWidget-editField {
+	background: var( --panel2 ) !important;
+	color: var( --text2 ) !important;
+	border-color: var( --line2 ) !important;
+}
+.mw-widget-calendarWidget-day-heading {
+	background: transparent !important;
+	color: var( --muted ) !important;
+}
+.mw-widget-calendarWidget-item:hover,
+.mw-widget-calendarWidget-item-selected,
+.mw-widgets-datetime-calendarWidget-selected {
+	background: var( --active ) !important;
+}
+.mw-widget-calendarWidget-item-selected {
+	box-shadow: 0 0 8px rgba( var( --glow ), 0.5 );
+}
+.mw-widget-calendarWidget-prevButton .oo-ui-icon,
+.mw-widget-calendarWidget-nextButton .oo-ui-icon,
+.mw-widget-calendarWidget-upButton .oo-ui-icon {
+	filter: invert( 1 );
+}
+
+/* File page: metadata table and file history header cells */
+.hlp-page table.mw-metadata,
+.hlp-page .mw-metadata th,
+.hlp-page .mw-metadata td,
+.hlp-page .filehistory th,
+.hlp-page .filehistory td {
+	background: var( --panel );
+	color: var( --text );
+	border-color: var( --line );
+}
+.hlp-page .mw-metadata th {
+	background: var( --active );
+	color: var( --text2 );
+}
+.hlp-page table.mw-metadata {
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+/* Other core blocks with light defaults */
+.hlp-page .mw-json tr,
+.hlp-page .mw-json-single-value,
+.hlp-page .mw-json-empty,
+.hlp-page .mw-changeslist-legend,
+.hlp-page .mw-search-profile-tabs,
+.hlp-page .mw-search-interwiki-project,
+.hlp-page .searchResultImage-thumbnail-placeholder,
+.hlp-page .mw-contribute-tabs-content,
+.hlp-page .mw-destfile-warning,
+.hlp-page .mw-apisandbox-toolbar,
+.hlp-page .mw-upload-bookletLayout-filePreview,
+.hlp-page .fancycaptcha-captcha-container,
+.hlp-page .fancycaptcha-captcha-and-reload,
+.hlp-page .mw-tempuserlink,
+.hlp-page .toc,
+.hlp-page .toccolours,
+.hlp-page .oo-ui-window-body .oo-ui-fieldLayout-messages,
+.hlp-page .mw-htmlform-ooui tbody tr:nth-child( even ) td,
+.mw-notification,
+.oo-ui-window-body,
+.oo-ui-dialog-content {
+	background: var( --panel ) !important;
+	color: var( --text ) !important;
+	border-color: var( --line ) !important;
+}
+.hlp-page .mw-htmlform-ooui tbody tr:hover td,
+.mw-rcfilters-ui-filterMenuOptionWidget.oo-ui-optionWidget-highlighted,
+.mw-rcfilters-ui-itemMenuOptionWidget:hover,
+.mw-rcfilters-ui-savedLinksListItemWidget:hover {
+	background: var( --active ) !important;
+}
+.hlp-page .searchresult,
+.hlp-page .mw-search-result-data {
+	color: var( --muted );
+}
+.hlp-page figure > figcaption {
+	background: transparent;
+	color: var( --muted );
+}
