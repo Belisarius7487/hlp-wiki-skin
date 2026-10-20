@@ -664,3 +664,43 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page .hlp-main .cdx-button:not(.cdx-button--action-progressive):hover {
 	background: var(--active) !important;
 }
+
+/* ---- MediaWiki form widgets (OOUI / Codex): inputs, dropdowns, buttons ---- */
+.hlp-page .oo-ui-textInputWidget input,
+.hlp-page .oo-ui-textInputWidget textarea,
+.hlp-page .oo-ui-dropdownWidget .oo-ui-dropdownWidget-handle,
+.hlp-page .oo-ui-comboBoxInputWidget input,
+.hlp-page .oo-ui-menuSelectWidget,
+.hlp-page .oo-ui-dropdownInputWidget select,
+.hlp-page .cdx-text-input__input,
+.hlp-page .cdx-select-vue__handle,
+.hlp-page select,
+.hlp-page textarea {
+	background: var(--panel2) !important;
+	color: var(--text2) !important;
+	border-color: var(--line2) !important;
+}
+.hlp-page .oo-ui-labelElement-label,
+.hlp-page .oo-ui-menuOptionWidget .oo-ui-labelElement-label {
+	color: var(--text2);
+}
+.hlp-page .oo-ui-menuOptionWidget.oo-ui-optionWidget-highlighted,
+.hlp-page .oo-ui-menuOptionWidget:hover {
+	background: var(--active) !important;
+}
+.hlp-page .oo-ui-buttonElement-framed > .oo-ui-buttonElement-button {
+	background: var(--panel) !important;
+	color: var(--text2) !important;
+	border-color: var(--line2) !important;
+}
+.hlp-page .oo-ui-flaggedElement-progressive.oo-ui-buttonElement-framed > .oo-ui-buttonElement-button,
+.hlp-page .cdx-button--action-progressive {
+	background: var(--accent) !important;
+	color: #fff !important;
+	border-color: var(--accent) !important;
+}
+.hlp-page fieldset,
+.hlp-page .oo-ui-fieldsetLayout {
+	background: transparent;
+	border-color: var(--line2);
+}
