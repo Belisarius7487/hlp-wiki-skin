@@ -1529,3 +1529,19 @@ html.hlp-void .hlp-page [style*="#D44" i] *:not( a ) {
 html.hlp-void .hlp-page [style*="#D44" i] a {
 	text-decoration: underline;
 }
+
+/* Void: same reds written as background-color (e.g. Veteran Comments box uses #211) */
+html.hlp-void .hlp-page [style*="background-color:\20 #211" i],
+html.hlp-void .hlp-page [style*="background-color:#211" i],
+html.hlp-void .hlp-page [style*="background-color:\20 #1B0E0E" i],
+html.hlp-void .hlp-page [style*="background-color:#1B0E0E" i],
+html.hlp-void .hlp-page [style*="background-color:\20 #351515" i],
+html.hlp-void .hlp-page [style*="background-color:#351515" i] {
+	background: var( --panel ) !important;
+}
+html.hlp-void .hlp-page [style*="background-color:\20 #311" i],
+html.hlp-void .hlp-page [style*="background-color:#311" i],
+html.hlp-void .hlp-page [style*="background-color:\20 #522" i],
+html.hlp-void .hlp-page [style*="background-color:#522" i] {
+	background: var( --active ) !important;
+}
