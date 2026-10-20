@@ -1372,3 +1372,46 @@ html.hlp-void .hlp-page [style*="#3C1E1E" i] {
 html.hlp-void .hlp-page [style*="#202020" i] {
 	background: var( --panel ) !important;
 }
+
+/* ---- Mission navigation (Template:Mission): previous / walkthrough / next as buttons ----
+ * Matched by the template's wrapper table (background:#000000, no nested tables). */
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) {
+	border-collapse: separate !important;
+	border-spacing: 10px 8px;
+	margin: 1em auto;
+	width: auto;
+	background: transparent !important;
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td {
+	background: var( --panel );
+	border: 1px solid var( --line2 );
+	border-radius: 10px;
+	padding: 10px 22px;
+	text-align: center;
+	white-space: nowrap;
+	transition: box-shadow 0.15s, background 0.15s;
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td:hover {
+	background: var( --active );
+	box-shadow: 0 0 14px rgba( var( --glow ), 0.45 );
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td:empty {
+	background: none;
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td[rowspan] {
+	background: var( --active );
+	font-weight: bold;
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td:first-child a::before {
+	content: "\2190\00a0";
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td:last-child a::after {
+	content: "\00a0\2192";
+}
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td[rowspan] a::before,
+.hlp-page .hlp-body table[style*="background:#000000" i]:not( :has( table ) ) > * > tr > td[rowspan] a::after {
+	content: none;
+}
