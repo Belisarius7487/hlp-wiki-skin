@@ -844,14 +844,14 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
  * rounded, full-width cards. Matched by their template attributes (width="65%" and
  * width="620px"); if a template changes, only that card falls back to its own look. */
 /* The wrapper becomes a plain block: it fills the space left of the floated navigation box. */
-.hlp-page table[style*="background:#000000" i],
-.hlp-page table[style*="background:\20 #000000" i],
-.hlp-page table[style*="background:#000000" i] > tbody,
-.hlp-page table[style*="background:\20 #000000" i] > tbody,
-.hlp-page table[style*="background:#000000" i] > tbody > tr,
-.hlp-page table[style*="background:\20 #000000" i] > tbody > tr,
-.hlp-page table[style*="background:#000000" i] > tbody > tr > td,
-.hlp-page table[style*="background:\20 #000000" i] > tbody > tr > td {
+.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ),
+.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ),
+.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody,
+.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody,
+.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody > tr,
+.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody > tr,
+.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody > tr > td,
+.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody > tr > td {
 	display: block;
 	width: auto !important;
 	padding-top: 0 !important;
@@ -909,8 +909,8 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 }
 
 /* The wrapper is its own formatting context, so it sits beside the floated navigation box. */
-.hlp-page table[style*="background:#000000" i],
-.hlp-page table[style*="background:\20 #000000" i] {
+.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ),
+.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) {
 	display: flow-root;
 }
 
