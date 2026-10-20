@@ -1329,3 +1329,38 @@ html.hlp-js .hlp-body .toc {
 		max-height: none;
 	}
 }
+
+/* ---- Headings: bars that separate sections (like the old wiki, in the new style) ---- */
+.hlp-page .hlp-body .mw-heading2 {
+	margin: 1.6em 0 0.7em;
+	padding-bottom: 4px;
+	border-bottom: 1px solid var( --line2 );
+}
+.hlp-page .hlp-body .mw-heading3 {
+	margin: 1.3em 0 0.7em;
+	padding: 6px 14px;
+	background: var( --panel );
+	border: 1px solid var( --line );
+	border-left: 3px solid var( --accent );
+	border-radius: 6px;
+}
+.hlp-page .hlp-body .mw-heading4 {
+	margin: 1.1em 0 0.6em;
+	padding: 3px 12px;
+	border-left: 2px solid var( --line2 );
+}
+.hlp-page .hlp-body .mw-heading3 h3,
+.hlp-page .hlp-body .mw-heading4 h4 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+/* Fallback for headings without the wrapper element (older markup) */
+.hlp-page .hlp-body > h3,
+.hlp-page .hlp-body .mw-parser-output > h3 {
+	padding: 6px 14px;
+	background: var( --panel );
+	border: 1px solid var( --line );
+	border-left: 3px solid var( --accent );
+	border-radius: 6px;
+}
