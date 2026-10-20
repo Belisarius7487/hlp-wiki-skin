@@ -1462,3 +1462,26 @@ html.hlp-void .hlp-page [style*="#202020" i] {
 .hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) td p:empty {
 	display: none;
 }
+
+/* ---- Void: more reds from templates (notices, banners) ---- */
+html.hlp-void .hlp-page [style*="background:\20 #311" i],
+html.hlp-void .hlp-page [style*="background:#311" i],
+html.hlp-void .hlp-page [style*="background:\20 #522" i],
+html.hlp-void .hlp-page [style*="background:#522" i] {
+	background: var( --active ) !important;
+}
+html.hlp-void .hlp-page [style*="background:\20 #351515" i],
+html.hlp-void .hlp-page [style*="background:#351515" i],
+html.hlp-void .hlp-page [style*="background:\20 #1B0E0E" i],
+html.hlp-void .hlp-page [style*="background:#1B0E0E" i] {
+	background: var( --panel ) !important;
+}
+html.hlp-void .hlp-page [style*="background:\20 #101010" i],
+html.hlp-void .hlp-page [style*="background:#101010" i] {
+	background: var( --panel2 ) !important;
+}
+html.hlp-void .hlp-page [style*="#D33" i],
+html.hlp-void .hlp-page [style*="#811" i],
+html.hlp-void .hlp-page [style*="#522" i] {
+	border-color: var( --accent ) !important;
+}
