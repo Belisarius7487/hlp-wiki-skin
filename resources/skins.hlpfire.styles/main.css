@@ -748,3 +748,42 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 	filter: invert(1) brightness(1.2);
 	opacity: 0.9;
 }
+
+/* ---- Date input (idle display) and calendar popup ---- */
+.mw-widgets-dateInputWidget-handle,
+.mw-widgets-dateInputWidget .oo-ui-inputWidget-input,
+.mw-widgets-dateInputWidget .mw-widgets-dateInputWidget-handle,
+.mw-widgets-dateInputWidget .oo-ui-textInputWidget,
+.mw-widgets-calendarWidget,
+.mw-widgets-calendarWidget-item,
+.mw-widgets-calendarWidget-day,
+.mw-widgets-calendarWidget-labelButton,
+.oo-ui-calendarWidget,
+.oo-ui-calendarWidget .oo-ui-buttonElement-button {
+	background: var(--panel2) !important;
+	color: var(--text2) !important;
+	border-color: var(--line2) !important;
+}
+.mw-widgets-dateInputWidget-handle,
+.mw-widgets-dateInputWidget-handle .oo-ui-labelElement-label,
+.mw-widgets-dateInputWidget-handle .oo-ui-inputWidget-input {
+	color: var(--text2) !important;
+}
+.mw-widgets-calendarWidget-item,
+.mw-widgets-calendarWidget-day,
+.mw-widgets-calendarWidget-labelButton {
+	color: var(--text2) !important;
+}
+.mw-widgets-calendarWidget-item:hover,
+.mw-widgets-calendarWidget-day:hover,
+.mw-widgets-calendarWidget-item-selected,
+.mw-widgets-calendarWidget-item-selected:hover {
+	background: var(--active) !important;
+}
+.mw-widgets-calendarWidget-day-heading,
+.mw-widgets-calendarWidget-item-inactive,
+.mw-widgets-calendarWidget-day-additional,
+.mw-widgets-calendarWidget-day-heading .oo-ui-labelElement-label {
+	color: var(--muted) !important;
+	background: transparent !important;
+}
