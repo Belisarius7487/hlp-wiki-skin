@@ -1036,3 +1036,123 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 	color: #fff;
 	border-color: var( --accent );
 }
+
+/* ---- More black/white default blocks (round 3) ---- */
+
+/* Navigation boxes in articles that use other spellings of black */
+.hlp-page [style*="background-color:#000" i],
+.hlp-page [style*="background-color:\20 #000" i],
+.hlp-page [style*="background:black" i],
+.hlp-page [style*="background:\20 black" i],
+.hlp-page [style*="background-color:black" i],
+.hlp-page [style*="background-color:\20 black" i],
+.hlp-page [bgcolor="#000000"],
+.hlp-page [bgcolor="#000"],
+.hlp-page [bgcolor="black"] {
+	background: var( --bg ) !important;
+}
+
+/* Edit page: option area, summary, checkboxes, buttons row */
+.hlp-page .editOptions,
+.hlp-page .editButtons,
+.hlp-page .mw-editform,
+.hlp-page .mw-summary,
+.hlp-page #wpSummaryLabel,
+.hlp-page .mw-htmlform-submit-buttons,
+.hlp-page .mw-prefs-buttons,
+.hlp-page .oo-ui-fieldLayout-field {
+	background: transparent !important;
+	color: var( --text ) !important;
+	border-color: var( --line ) !important;
+}
+.hlp-page .editOptions {
+	background: var( --panel ) !important;
+	border: 1px solid var( --line );
+	border-radius: 6px;
+}
+.hlp-page .editOptions label,
+.hlp-page .editOptions .oo-ui-labelElement-label,
+.hlp-page #wpSummaryLabel,
+.hlp-page .mw-summary label,
+.hlp-page .oo-ui-fieldLayout-header .oo-ui-labelElement-label {
+	color: var( --text2 ) !important;
+}
+.hlp-page .editOptions input[type="checkbox"],
+.hlp-page input[type="checkbox"] {
+	accent-color: var( --accent );
+}
+.hlp-page .cancelLink a,
+.hlp-page .cancelLink {
+	color: var( --link ) !important;
+}
+
+/* Disabled inputs: dark and readable instead of white with pale text */
+.hlp-page .oo-ui-widget-disabled input,
+.hlp-page .oo-ui-widget-disabled textarea,
+.hlp-page .oo-ui-textInputWidget.oo-ui-widget-disabled .oo-ui-inputWidget-input,
+.hlp-page input:disabled,
+.hlp-page textarea:disabled,
+.hlp-page select:disabled {
+	background: var( --panel2 ) !important;
+	color: var( --muted ) !important;
+	-webkit-text-fill-color: var( --muted );
+	border-color: var( --line ) !important;
+}
+
+/* Recent changes filter bar */
+.mw-rcfilters-ui-table,
+.mw-rcfilters-ui-cell,
+.mw-rcfilters-ui-filterWrapperWidget,
+.mw-rcfilters-ui-filterTagMultiselectWidget,
+.mw-rcfilters-ui-filterTagMultiselectWidget-wrapper,
+.mw-rcfilters-ui-filterTagMultiselectWidget-views,
+.mw-rcfilters-ui-filterTagMultiselectWidget-views-select-widget,
+.mw-rcfilters-ui-filterTagMultiselectWidget-views-select-widget .oo-ui-buttonElement-button,
+.mw-rcfilters-ui-filtersViewWidget,
+.mw-rcfilters-ui-menuSelectWidget,
+.mw-rcfilters-ui-filterMenuOptionWidget,
+.mw-rcfilters-ui-filterMenuHeaderWidget,
+.mw-rcfilters-ui-changesListWrapperWidget,
+.mw-rcfilters-ui-savedLinksListWidget {
+	background: var( --panel2 ) !important;
+	color: var( --text2 ) !important;
+	border-color: var( --line2 ) !important;
+}
+.oo-ui-tagItemWidget,
+.oo-ui-tagItemWidget.oo-ui-widget-enabled,
+.mw-rcfilters-ui-filterTagItemWidget {
+	background: var( --active ) !important;
+	color: var( --text2 ) !important;
+	border-color: var( --line2 ) !important;
+}
+.oo-ui-tagItemWidget .oo-ui-labelElement-label {
+	color: var( --text2 ) !important;
+}
+
+/* Search suggestions (classic dropdown below the header search box) */
+.suggestions,
+.suggestions-results,
+.suggestions-result,
+.suggestions-special,
+.suggestions-result-current,
+.mw-searchSuggest-link,
+.cdx-typeahead-search__menu,
+.cdx-typeahead-search__search-footer {
+	background: var( --panel2 ) !important;
+	color: var( --text2 ) !important;
+	border-color: var( --line2 ) !important;
+}
+.suggestions-result-current,
+.suggestions-special:hover,
+.suggestions-result:hover {
+	background: var( --active ) !important;
+}
+.suggestions .suggestions-special .special-label,
+.suggestions .suggestions-special .special-query {
+	color: var( --text2 ) !important;
+}
+.suggestions a,
+.suggestions-result a,
+.suggestions-result span {
+	color: var( --text2 );
+}
