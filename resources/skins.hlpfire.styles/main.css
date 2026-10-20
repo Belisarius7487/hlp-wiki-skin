@@ -1545,3 +1545,18 @@ html.hlp-void .hlp-page [style*="background-color:\20 #522" i],
 html.hlp-void .hlp-page [style*="background-color:#522" i] {
 	background: var( --active ) !important;
 }
+
+/* Void: in notice banners the text is light and links are saturated violet and underlined */
+html.hlp-void .hlp-page [style*="#D33" i]:not( a ),
+html.hlp-void .hlp-page [style*="#D33" i] *:not( a ),
+html.hlp-void .hlp-page [style*="#811" i] *:not( a ),
+html.hlp-void .hlp-page [style*="#522" i] *:not( a ) {
+	color: var( --text2 ) !important;
+}
+html.hlp-void .hlp-page [style*="#D33" i] a,
+html.hlp-void .hlp-page [style*="#811" i] a,
+html.hlp-void .hlp-page [style*="#522" i] a,
+html.hlp-void .hlp-page [style*="#D44" i] a {
+	color: var( --linkhov ) !important;
+	text-decoration: underline;
+}
