@@ -1,0 +1,7 @@
+{
+	"@metadata": {
+		"authors": [ "HLP" ]
+	},
+	"skinname-hlpfire": "Name of the skin, shown in preferences",
+	"hlpfire-desc": "Short description of the skin"
+}

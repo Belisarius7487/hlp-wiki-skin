@@ -1,0 +1,55 @@
+{
+	"name": "HLPFire",
+	"author": [ "HLP" ],
+	"url": "https://wiki.hard-light.net",
+	"descriptionmsg": "hlpfire-desc",
+	"namemsg": "skinname-hlpfire",
+	"license-name": "GPL-2.0-or-later",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.43.0"
+	},
+	"ValidSkinNames": {
+		"hlpfire": {
+			"class": "SkinMustache",
+			"args": [
+				{
+					"name": "hlpfire",
+					"responsive": true,
+					"supportsMwHeading": true,
+					"templateDirectory": "templates/",
+					"scripts": [ "skins.hlpfire.scripts" ],
+					"styles": [ "skins.hlpfire.styles" ]
+				}
+			]
+		}
+	},
+	"MessagesDirs": {
+		"HLPFire": [ "i18n" ]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "HLPFire"
+	},
+	"ResourceModules": {
+		"skins.hlpfire.styles": {
+			"class": "MediaWiki\\ResourceLoader\\SkinModule",
+			"features": {
+				"normalize": true,
+				"elements": true,
+				"content-links": true,
+				"content-links-external": true,
+				"content-media": true,
+				"interface-category": true,
+				"logo": true
+			},
+			"styles": {
+				"resources/skins.hlpfire.styles/main.css": { "media": "screen" }
+			}
+		},
+		"skins.hlpfire.scripts": {
+			"packageFiles": [ "resources/skins.hlpfire.scripts/main.js" ]
+		}
+	},
+	"manifest_version": 2
+}

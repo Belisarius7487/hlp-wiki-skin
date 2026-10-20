@@ -1,0 +1,624 @@
+/*
+ * HLP Fire skin styles. Plain CSS with custom properties.
+ * Colours: Fire from the HLP Fire forum theme (index.css), Void from void.css.
+ * The html.hlp-void class switches the palette. FSO version boxes keep their own inline colours.
+ */
+
+/* ---- Palette: Fire (default) ---- */
+:root {
+	--bg: #1e1a1a;
+	--panel: #2b1617;
+	--panel2: #190b0b;
+	--active: #5e3832;
+	--line: #4b2323;
+	--line2: #6e341e;
+	--link: #ec965f;
+	--linkhov: #fdbf92;
+	--hi: #c89b69;
+	--code: #d2beaa;
+	--muted: #beaa94;
+	--soft: #c8b49e;
+	--text: #c9baa8;
+	--text2: #e1cdb6;
+	--accent: #e0532a;
+	--glow: 232, 84, 32;
+	color-scheme: dark;
+}
+
+/* ---- Palette: Void ---- */
+html.hlp-void {
+	--bg: #0e0a18;
+	--panel: #1c0d36;
+	--panel2: #100620;
+	--active: #421c74;
+	--line: #481c70;
+	--line2: #822ec8;
+	--link: #b491ff;
+	--linkhov: #c35fff;
+	--hi: #be9bf0;
+	--code: #d2bef0;
+	--muted: #b9a0e6;
+	--soft: #c8aff0;
+	--text: #c9bde6;
+	--text2: #e1cdff;
+	--accent: #a63df0;
+	--glow: 175, 70, 245;
+}
+
+/* ---- Base ---- */
+html,
+body {
+	margin: 0;
+	background: var( --bg );
+	color: var( --text );
+}
+
+body {
+	font: 16px/1.65 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+
+a {
+	color: var( --link );
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: var( --linkhov );
+	text-decoration: underline;
+}
+
+a.new,
+a.new:visited {
+	color: #e06a6a;
+}
+
+:focus-visible {
+	outline: 2px solid var( --accent );
+	outline-offset: 2px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* ---- Header ---- */
+.hlp-header {
+	position: relative;
+	z-index: 20;
+	background: var( --panel );
+	border-bottom: 2px solid var( --accent );
+	box-shadow: 0 0 0 1px rgba( var( --glow ), 0.55 ), 0 4px 18px rgba( var( --glow ), 0.5 ), 0 10px 40px rgba( var( --glow ), 0.25 );
+}
+
+.hlp-header-inner {
+	max-width: 1360px;
+	margin: 0 auto;
+	padding: 12px 24px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px 24px;
+}
+
+.hlp-brand {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: #fff;
+}
+
+.hlp-brand:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.hlp-logo {
+	display: block;
+	width: 48px;
+	height: 48px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.hlp-sitename {
+	font-weight: 700;
+	font-size: 24px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	text-shadow: 0 0 14px rgba( var( --glow ), 0.6 );
+}
+
+/* ---- Navigation, menus ---- */
+.hlp-nav {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 4px;
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.hlp-header ul,
+.hlp-tabs ul,
+.hlp-menu-panel ul,
+.hlp-footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.hlp-nav > ul {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 4px;
+}
+
+.hlp-nav li a,
+.hlp-menu > summary {
+	white-space: nowrap;
+	display: block;
+	padding: 8px 14px;
+	border-radius: 6px;
+	color: var( --text2 );
+	font-weight: 500;
+	cursor: pointer;
+	list-style: none;
+}
+
+.hlp-menu > summary::-webkit-details-marker {
+	display: none;
+}
+
+.hlp-menu > summary::after {
+	content: ' \25BE';
+}
+
+.hlp-nav li a:hover,
+.hlp-menu > summary:hover {
+	background: var( --active );
+	color: #fff;
+	text-decoration: none;
+}
+
+.hlp-menu {
+	position: relative;
+}
+
+.hlp-menu-panel {
+	position: absolute;
+	z-index: 30;
+	top: 100%;
+	left: 0;
+	min-width: 220px;
+	padding: 10px 14px;
+	background: var( --panel );
+	border: 1px solid var( --line2 );
+	border-radius: 8px;
+	box-shadow: 0 0 16px rgba( var( --glow ), 0.35 );
+}
+
+.hlp-portlet h3 {
+	margin: 8px 0 2px;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var( --hi );
+}
+
+.hlp-menu-panel li a {
+	display: block;
+	padding: 3px 0;
+}
+
+/* ---- Search, switch, user links ---- */
+.hlp-search {
+	display: flex;
+	gap: 8px;
+	flex: 0 1 300px;
+}
+
+.hlp-search input[type='search'],
+.hlp-search input[type='text'] {
+	flex: 1;
+	min-width: 0;
+	height: 44px;
+	box-sizing: border-box;
+	padding: 0 14px;
+	background: var( --bg );
+	color: var( --text2 );
+	border: 1px solid var( --line2 );
+	border-radius: 8px;
+	font: inherit;
+}
+
+.hlp-search input[type='submit'],
+.hlp-search button {
+	height: 44px;
+	padding: 0 14px;
+	background: var( --active );
+	color: var( --text2 );
+	border: 1px solid var( --line2 );
+	border-radius: 8px;
+	font: inherit;
+	cursor: pointer;
+}
+
+#hlp-scheme-switch {
+	height: 44px;
+	padding: 0 16px;
+	border-radius: 8px;
+	border: 1px solid var( --line2 );
+	background: var( --panel );
+	color: var( --hi );
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba( var( --glow ), 0.4 );
+}
+
+#hlp-scheme-switch:hover {
+	box-shadow: 0 0 16px rgba( var( --glow ), 0.8 );
+}
+
+.hlp-personal ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 14px;
+}
+
+.hlp-personal li a {
+	color: var( --hi );
+	font-size: 14px;
+}
+
+/* ---- Page area ---- */
+.hlp-wrap {
+	max-width: 1360px;
+	margin: 0 auto;
+	padding: 32px 24px 64px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+	align-items: flex-start;
+}
+
+.hlp-main {
+	flex: 999 1 560px;
+	min-width: 0;
+	background: transparent;
+}
+
+.hlp-aside:not( [hidden] ) {
+	flex: 1 1 240px;
+	max-width: 320px;
+	min-width: 220px;
+	position: sticky;
+	top: 16px;
+}
+
+.hlp-titlerow {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 12px;
+	border-bottom: 1px solid var( --line );
+	padding-bottom: 12px;
+	margin-bottom: 16px;
+}
+
+.hlp-titlerow h1 {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font-size: 40px;
+	line-height: 1.15;
+	color: #fff;
+	text-shadow: 0 0 18px rgba( var( --glow ), 0.65 );
+}
+
+.hlp-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+}
+
+.hlp-tabs ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.hlp-tabs li a,
+.hlp-actions > summary {
+	display: block;
+	padding: 6px 14px;
+	border-radius: 6px;
+	background: var( --panel );
+	color: var( --text2 );
+	border: 1px solid var( --line );
+	font-size: 14px;
+}
+
+.hlp-tabs li.selected a {
+	background: var( --active );
+	color: #fff;
+	border-color: var( --accent );
+	box-shadow: 0 0 10px rgba( var( --glow ), 0.55 );
+}
+
+.hlp-tabs li a:hover,
+.hlp-actions > summary:hover {
+	background: var( --active );
+	text-decoration: none;
+}
+
+.hlp-actions .hlp-menu-panel {
+	left: auto;
+	right: 0;
+}
+
+/* ---- Article content ---- */
+.hlp-body h2,
+.hlp-body h3,
+.hlp-body h4 {
+	color: #fff;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.hlp-body h2 {
+	font-size: 28px;
+	margin: 36px 0 12px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid var( --line );
+}
+
+.hlp-body h3 {
+	font-size: 22px;
+	margin: 24px 0 8px;
+}
+
+.mw-editsection,
+.mw-editsection a {
+	font-size: 13px;
+	color: var( --muted );
+}
+
+.hlp-body p {
+	margin: 0.6em 0 1em;
+}
+
+.hlp-body pre,
+.hlp-body code {
+	background: var( --panel2 );
+	color: var( --code );
+	border: 1px solid var( --line );
+	border-radius: 6px;
+	font-family: ui-monospace, Menlo, Consolas, monospace;
+}
+
+.hlp-body code {
+	padding: 1px 5px;
+}
+
+.hlp-body pre {
+	padding: 14px 16px;
+	overflow-x: auto;
+	line-height: 1.55;
+}
+
+.hlp-body pre code {
+	border: 0;
+	padding: 0;
+	background: none;
+}
+
+table.wikitable {
+	background: var( --panel );
+	border: 1px solid var( --line );
+	border-collapse: collapse;
+	color: var( --text );
+}
+
+table.wikitable > * > tr > th,
+table.wikitable > * > tr > td {
+	border: 1px solid var( --line );
+	padding: 0.35em 0.6em;
+}
+
+table.wikitable > * > tr > th {
+	background: var( --active );
+	color: var( --text2 );
+}
+
+.thumbinner,
+#catlinks,
+.mw-message-box,
+.mw-warning-with-logexcerpt {
+	background: var( --panel );
+	border: 1px solid var( --line );
+	color: var( --text );
+}
+
+#catlinks {
+	margin-top: 24px;
+	padding: 8px 12px;
+	border-radius: 6px;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid var( --line );
+}
+
+input[type='text'],
+input[type='search'],
+input[type='password'],
+input[type='email'],
+textarea,
+select {
+	background: var( --panel2 );
+	color: var( --text2 );
+	border: 1px solid var( --line2 );
+	border-radius: 4px;
+	font: inherit;
+}
+
+button,
+input[type='submit'],
+.cdx-button {
+	background: var( --active );
+	color: var( --text2 );
+	border: 1px solid var( --line2 );
+	border-radius: 4px;
+	font: inherit;
+	cursor: pointer;
+}
+
+/* ---- Table of contents in the side panel ---- */
+.hlp-aside #toc,
+.hlp-aside #mw-toc,
+.hlp-aside .toc {
+	background: var( --panel );
+	border: 1px solid rgba( var( --glow ), 0.35 );
+	border-top: 3px solid var( --accent );
+	border-radius: 8px;
+	padding: 14px 16px;
+	box-shadow: 0 0 16px rgba( var( --glow ), 0.3 ), 0 0 36px rgba( var( --glow ), 0.15 );
+	font-size: 15px;
+	max-height: calc( 100vh - 48px );
+	overflow-y: auto;
+}
+
+.hlp-aside .toc ul,
+.hlp-aside #toc ul,
+.hlp-aside #mw-toc ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 14px;
+}
+
+.hlp-aside .toc > ul,
+.hlp-aside #toc > ul,
+.hlp-aside #mw-toc > ul {
+	padding-left: 0;
+}
+
+.hlp-aside .toctitle,
+.hlp-aside .vector-toc-title,
+.hlp-aside .toc h2 {
+	margin: 0 0 8px;
+	border: 0;
+	font-size: 16px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var( --hi );
+}
+
+/* ---- Footer ---- */
+.hlp-footer {
+	border-top: 1px solid var( --line );
+	background: var( --panel2 );
+	padding: 20px 24px;
+	text-align: center;
+	font-size: 14px;
+	color: var( --muted );
+}
+
+.hlp-footer ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 4px 18px;
+}
+
+.hlp-footer-icon {
+	display: inline-block;
+	margin: 0 6px 10px;
+}
+
+/* ---- Link colours: override the browser/core colours for visited and external links ---- */
+.hlp-page a:visited,
+.hlp-page a.external,
+.hlp-page a.external:visited {
+	color: var( --link );
+}
+
+.hlp-page a:visited:hover,
+.hlp-page a.external:hover {
+	color: var( --linkhov );
+}
+
+.hlp-page a.new,
+.hlp-page a.new:visited {
+	color: #e06a6a;
+}
+
+.hlp-page .hlp-brand,
+.hlp-page .hlp-brand:visited {
+	color: #fff;
+}
+
+.hlp-page .hlp-nav li a,
+.hlp-page .hlp-nav li a:visited,
+.hlp-page .hlp-tabs li a,
+.hlp-page .hlp-tabs li a:visited {
+	color: var( --text2 );
+}
+
+.hlp-page .hlp-personal li a,
+.hlp-page .hlp-personal li a:visited {
+	color: var( --hi );
+}
+
+/* ---- Search: hide the extra "Go" button, the Enter key does the same ---- */
+.hlp-search input[name='go'],
+.hlp-search button[name='go'] {
+	display: none;
+}
+
+/* ---- Table of contents details ---- */
+.hlp-aside .tocnumber,
+.hlp-aside .toctogglespan {
+	color: var( --muted );
+}
+
+.hlp-aside .toctogglelabel,
+.hlp-aside .toctogglelabel:visited {
+	color: var( --link );
+}
+
+/* ---- Narrower screens: menu moves to its own row ---- */
+@media ( max-width: 1100px ) {
+	.hlp-nav {
+		flex-basis: 100%;
+		order: 5;
+	}
+
+	.hlp-nav > ul {
+		flex-wrap: wrap;
+	}
+}
+
+@media ( max-width: 720px ) {
+	.hlp-header-inner,
+	.hlp-wrap {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.hlp-titlerow h1 {
+		font-size: 30px;
+	}
+
+	.hlp-aside:not( [hidden] ) {
+		position: static;
+		max-width: none;
+		flex-basis: 100%;
+	}
+}
