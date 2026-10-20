@@ -643,3 +643,24 @@ html.hlp-void .hlp-page [style*="#462424" i] {
 html.hlp-void .hlp-page [style*="#AA2020" i] {
 	border-color: var(--accent) !important;
 }
+
+/* ---- Revision history and form buttons: replace the default light blocks ---- */
+.hlp-page #pagehistory li.selected,
+.hlp-page .mw-changeslist li.selected {
+	background: var(--panel) !important;
+	border-color: var(--line2) !important;
+}
+.hlp-page .hlp-main input[type="submit"],
+.hlp-page .hlp-main input[type="button"],
+.hlp-page .hlp-main .cdx-button:not(.cdx-button--action-progressive) {
+	background: var(--panel) !important;
+	color: var(--text2) !important;
+	border: 1px solid var(--line2) !important;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.hlp-page .hlp-main input[type="submit"]:hover,
+.hlp-page .hlp-main input[type="button"]:hover,
+.hlp-page .hlp-main .cdx-button:not(.cdx-button--action-progressive):hover {
+	background: var(--active) !important;
+}
