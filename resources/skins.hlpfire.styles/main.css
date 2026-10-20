@@ -1854,3 +1854,24 @@ html.hlp-void .hlp-page [bgcolor] a:not( .new ):not( .mw-selflink ) {
 .hlp-page [style*="#C5C58B" i] {
 	border-color: var( --line2 ) !important;
 }
+
+/* ---- Warning box (Template:Warning): stays red in both schemes, with a red glow ----
+ * Matched by its two inline colours (#800000 background, #FF0000 border). */
+html .hlp-page [style*="#800000" i][style*="#FF0000" i],
+html.hlp-void .hlp-page [style*="#800000" i][style*="#FF0000" i] {
+	background: #6e0f0f !important;
+	border-color: #ff3b3b !important;
+	border-radius: 10px;
+	padding: 6px 12px !important;
+	box-shadow: 0 0 18px rgba( 255, 59, 59, 0.45 );
+	color: #fff !important;
+}
+html .hlp-page [style*="#800000" i][style*="#FF0000" i] *:not( a ),
+html.hlp-void .hlp-page [style*="#800000" i][style*="#FF0000" i] *:not( a ) {
+	color: #fff !important;
+}
+html .hlp-page [style*="#800000" i][style*="#FF0000" i] a,
+html.hlp-void .hlp-page [style*="#800000" i][style*="#FF0000" i] a {
+	color: #ffd0d0 !important;
+	text-decoration: underline;
+}
