@@ -1702,3 +1702,25 @@ html.hlp-void .hlp-page [style*="background" i] a:not( .new ):not( .mw-selflink 
 html.hlp-void .hlp-page [bgcolor] a:not( .new ):not( .mw-selflink ) {
 	color: var( --linkhov );
 }
+
+/* ---- Image galleries (<gallery>): dark rounded cards instead of white frames ---- */
+.hlp-page ul.gallery .gallerybox,
+.hlp-page ul.gallery .gallerybox .thumb,
+.hlp-page .gallerybox div.thumb {
+	background: var( --panel ) !important;
+	border-color: var( --line ) !important;
+}
+.hlp-page ul.gallery .gallerybox {
+	border-radius: 10px;
+	padding: 6px;
+}
+.hlp-page ul.gallery .gallerybox .thumb {
+	border: 1px solid var( --line );
+	border-radius: 8px;
+}
+.hlp-page ul.gallery .gallerytext {
+	color: var( --text );
+}
+.hlp-page ul.gallery .thumb img {
+	border-radius: 4px;
+}
