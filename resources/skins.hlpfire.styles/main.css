@@ -843,9 +843,18 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
  * The wiki templates use fixed widths and square tables. These rules turn them into
  * rounded, full-width cards. Matched by their template attributes (width="65%" and
  * width="620px"); if a template changes, only that card falls back to its own look. */
+/* The wrapper becomes a plain block: it fills the space left of the floated navigation box. */
 .hlp-page table[style*="background:#000000" i],
-.hlp-page table[style*="background:\20 #000000" i] {
-	width: 100% !important;
+.hlp-page table[style*="background:\20 #000000" i],
+.hlp-page table[style*="background:#000000" i] > tbody,
+.hlp-page table[style*="background:\20 #000000" i] > tbody,
+.hlp-page table[style*="background:#000000" i] > tbody > tr,
+.hlp-page table[style*="background:\20 #000000" i] > tbody > tr,
+.hlp-page table[style*="background:#000000" i] > tbody > tr > td,
+.hlp-page table[style*="background:\20 #000000" i] > tbody > tr > td {
+	display: block;
+	width: auto !important;
+	padding-top: 0 !important;
 }
 .hlp-page table[width="65%"][style*="AA2020" i],
 .hlp-page table[width="620px"][style*="AA2020" i] {
