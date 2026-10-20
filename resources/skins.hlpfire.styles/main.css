@@ -622,3 +622,24 @@ input[type='submit'],
 		flex-basis: 100%;
 	}
 }
+
+/* ---- Portal boxes on the Main Page: inline colours from the wiki templates ----
+ * Matched by their exact inline colour values. If a template changes its colour,
+ * only that box falls back to its own colour; nothing else breaks.
+ * FSO version boxes use other colours and are not matched. */
+.hlp-page [style*="background: #000" i],
+.hlp-page [style*="background:#000" i] {
+	background: var(--bg) !important;
+}
+html.hlp-void .hlp-page [style*="#512020" i] {
+	background: var(--active) !important;
+}
+html.hlp-void .hlp-page [style*="#302020" i] {
+	background: var(--panel) !important;
+}
+html.hlp-void .hlp-page [style*="#462424" i] {
+	background: var(--panel) !important;
+}
+html.hlp-void .hlp-page [style*="#AA2020" i] {
+	border-color: var(--accent) !important;
+}
