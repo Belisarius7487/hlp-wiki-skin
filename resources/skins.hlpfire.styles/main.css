@@ -704,3 +704,47 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 	background: transparent;
 	border-color: var(--line2);
 }
+
+/* ---- Widgets rendered outside .hlp-page (dropdown lists, popups, date input) ---- */
+.oo-ui-menuSelectWidget,
+.oo-ui-popupWidget-popup,
+.oo-ui-popupWidget-head,
+.oo-ui-dropdownWidget-handle,
+.oo-ui-inputWidget-input,
+.oo-ui-dateInputWidget .oo-ui-inputWidget-input,
+.mw-widgets-dateInputWidget .oo-ui-inputWidget-input,
+.oo-ui-textInputWidget .oo-ui-inputWidget-input,
+.oo-ui-capsuleMultiselectWidget,
+.oo-ui-tagMultiselectWidget-input,
+.oo-ui-tagMultiselectWidget-multilineTextInputWidget,
+.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled .oo-ui-tagMultiselectWidget-handle,
+.cdx-select-menu,
+.cdx-menu,
+.cdx-popover {
+	background: var(--panel2) !important;
+	color: var(--text2) !important;
+	border-color: var(--line2) !important;
+}
+.oo-ui-inputWidget-input::placeholder,
+.oo-ui-inputWidget-input[placeholder]:empty::before {
+	color: var(--muted) !important;
+}
+.oo-ui-menuOptionWidget,
+.oo-ui-menuOptionWidget .oo-ui-labelElement-label,
+.oo-ui-optionWidget .oo-ui-labelElement-label {
+	color: var(--text2) !important;
+}
+.oo-ui-optionWidget-selected,
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-highlighted,
+.oo-ui-menuOptionWidget:hover,
+.oo-ui-optionWidget.oo-ui-optionWidget-highlighted {
+	background: var(--active) !important;
+}
+/* Dark icons and arrows (SVG backgrounds) are inverted to light */
+.oo-ui-indicatorElement-indicator,
+.oo-ui-iconElement-icon,
+.cdx-select-vue__indicator,
+.cdx-icon {
+	filter: invert(1) brightness(1.2);
+	opacity: 0.9;
+}
