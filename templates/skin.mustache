@@ -6,6 +6,7 @@
 /* Apply the saved colour scheme before first paint to avoid a flash. */
 document.documentElement.classList.add( 'hlp-js' );
 try { if ( localStorage.getItem( 'hlp-wiki-scheme' ) === 'void' ) { document.documentElement.classList.add( 'hlp-void' ); } } catch ( e ) {}
+try { if ( localStorage.getItem( 'hlp-wiki-layout' ) === 'wide' ) { document.documentElement.classList.add( 'hlp-wide' ); } } catch ( e ) {}
 </script>
 <div class="hlp-page">
 	<header class="hlp-header">
@@ -32,6 +33,7 @@ try { if ( localStorage.getItem( 'hlp-wiki-scheme' ) === 'void' ) { document.doc
 			</form>
 			{{/data-search-box}}
 			<button type="button" id="hlp-scheme-switch" aria-label="Switch colour scheme">Theme: Fire</button>
+				<button type="button" id="hlp-layout-switch" aria-label="Switch page width">Layout: Normal</button>
 			{{#data-portlets}}{{#data-personal}}
 			<div class="hlp-personal"><ul>{{{html-items}}}</ul></div>
 			{{/data-personal}}{{/data-portlets}}

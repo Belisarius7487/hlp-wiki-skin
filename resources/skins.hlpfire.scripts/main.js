@@ -33,6 +33,32 @@
 		label();
 	}
 
+	function setupLayoutSwitch() {
+		var btn = document.getElementById( 'hlp-layout-switch' );
+		if ( !btn ) {
+			return;
+		}
+		function isWide() {
+			return root.classList.contains( 'hlp-wide' );
+		}
+		function label() {
+			btn.textContent = 'Layout: ' + ( isWide() ? 'Wide' : 'Normal' );
+		}
+		btn.addEventListener( 'click', function () {
+			var next = isWide() ? 'normal' : 'wide';
+			if ( next === 'wide' ) {
+				root.classList.add( 'hlp-wide' );
+			} else {
+				root.classList.remove( 'hlp-wide' );
+			}
+			try {
+				localStorage.setItem( 'hlp-wiki-layout', next );
+			} catch ( e ) {}
+			label();
+		} );
+		label();
+	}
+
 	// Move the standard table of contents into the sticky side panel.
 	// If MediaWiki changes its markup and nothing is found, the TOC simply stays in the text.
 	function setupToc() {
@@ -46,6 +72,7 @@
 
 	function init() {
 		setupSwitch();
+		setupLayoutSwitch();
 		setupToc();
 	}
 

@@ -246,7 +246,8 @@ img {
 	cursor: pointer;
 }
 
-#hlp-scheme-switch {
+#hlp-scheme-switch,
+#hlp-layout-switch {
 	height: 44px;
 	padding: 0 16px;
 	border-radius: 8px;
@@ -259,7 +260,8 @@ img {
 	box-shadow: 0 0 10px rgba( var( --glow ), 0.4 );
 }
 
-#hlp-scheme-switch:hover {
+#hlp-scheme-switch:hover,
+#hlp-layout-switch:hover {
 	box-shadow: 0 0 16px rgba( var( --glow ), 0.8 );
 }
 
@@ -1874,4 +1876,14 @@ html .hlp-page [style*="#800000" i][style*="#FF0000" i] a,
 html.hlp-void .hlp-page [style*="#800000" i][style*="#FF0000" i] a {
 	color: #ffd0d0 !important;
 	text-decoration: underline;
+}
+
+/* ---- Wide layout (button "Layout: Wide"): content uses the full window width ---- */
+html.hlp-wide .hlp-header-inner,
+html.hlp-wide .hlp-wrap {
+	max-width: none;
+}
+html.hlp-wide .hlp-main {
+	flex: 1 1 0;
+	min-width: 0;
 }
