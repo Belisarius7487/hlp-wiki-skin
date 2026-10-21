@@ -289,6 +289,8 @@ img {
 	flex: 999 1 560px;
 	min-width: 0;
 	background: transparent;
+	/* Lets the rules for a narrow article column react to the column width (see the end of this file). */
+	container: hlp-main / inline-size;
 }
 
 .hlp-aside:not( [hidden] ) {
@@ -1863,12 +1865,14 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 	margin-bottom: 1.5em !important;
 }
 
-/* ---- Phones: wide tables scroll sideways, floating boxes sit above the text ----
- * Rounded boxes use overflow:hidden, which cut off content wider than the screen
- * (e.g. long code lines in FSO table boxes). On narrow screens every top-level table
- * becomes its own horizontal scroll area, and boxes floated next to the text
- * (navigation boxes, infoboxes) take the full width instead of squeezing the article. */
-@media ( max-width: 720px ) {
+/* ---- Narrow article column: wide tables scroll sideways, floating boxes sit above the text ----
+ * Decided by the width of the article column itself (container query), not the screen,
+ * because the side panel with the TOC also takes space (e.g. phones in landscape).
+ * Rounded boxes use overflow:hidden, which cut off content wider than the column; a box
+ * floated to the right that is wider than the column was even cut off on the left.
+ * Here every top-level table becomes its own horizontal scroll area, and floated boxes
+ * (navigation boxes, infoboxes) take the full width instead of squeezing the text beside them. */
+@container hlp-main ( max-width: 800px ) {
 	.hlp-body .mw-parser-output table:not( table table ):not( :has( > thead ) ) {
 		display: block;
 		max-width: 100%;
