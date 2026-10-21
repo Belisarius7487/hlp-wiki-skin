@@ -2001,8 +2001,17 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 	overflow: hidden;
 }
 
-/* Round the image itself inside framed/thumbnail figures */
-.hlp-page figure[typeof~='mw:File/Thumb'] .mw-file-element,
-.hlp-page figure[typeof~='mw:File/Frame'] .mw-file-element {
-	border-radius: 6px;
+/* One closed rounded frame around image + caption.
+ * Core draws the figure border without a bottom edge and gives the caption its own
+ * border, which breaks the rounded corners; here the figure owns the whole frame. */
+.hlp-page figure[typeof~='mw:File/Thumb'],
+.hlp-page figure[typeof~='mw:File/Frame'] {
+	border: 1px solid var( --line2 ) !important;
+	border-radius: 10px;
+	overflow: hidden;
+	background: var( --panel );
+}
+.hlp-page figure[typeof~='mw:File/Thumb'] > figcaption,
+.hlp-page figure[typeof~='mw:File/Frame'] > figcaption {
+	border: 0 !important;
 }
