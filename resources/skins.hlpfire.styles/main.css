@@ -1973,3 +1973,18 @@ html.hlp-void .hlp-page :is( [style*="#603030" i], [bgcolor="#603030" i] ),
 html.hlp-void .hlp-page :is( [style*="#603030" i], [bgcolor="#603030" i] ) :is( *, font[color] ) {
 	color: var( --text2 ) !important;
 }
+
+/* ---- No layout jump when the TOC moves to the side panel ----
+ * The side panel is reserved by CSS as soon as the page contains a TOC, so the article
+ * keeps its width while main.js is still loading. main.js only fills the panel. */
+html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-aside[hidden] {
+	display: block;
+	flex: 1 1 240px;
+	max-width: 320px;
+	min-width: 220px;
+}
+@media ( max-width: 720px ) {
+	html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-aside[hidden] {
+		display: none;
+	}
+}
