@@ -1967,3 +1967,9 @@ html.hlp-void .hlp-page [style*="#A6110D" i] {
 	border-color: var( --line2 ) !important;
 	box-shadow: 0 0 10px rgba( var( --glow ), .35 );
 }
+
+/* Void: title text inside the #603030 header (inline gold) uses the light theme colour */
+html.hlp-void .hlp-page :is( [style*="#603030" i], [bgcolor="#603030" i] ),
+html.hlp-void .hlp-page :is( [style*="#603030" i], [bgcolor="#603030" i] ) :is( *, font[color] ) {
+	color: var( --text2 ) !important;
+}
