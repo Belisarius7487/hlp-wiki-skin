@@ -2000,3 +2000,9 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 	border-radius: 8px;
 	overflow: hidden;
 }
+
+/* Round the image itself inside framed/thumbnail figures */
+.hlp-page figure[typeof~='mw:File/Thumb'] .mw-file-element,
+.hlp-page figure[typeof~='mw:File/Frame'] .mw-file-element {
+	border-radius: 6px;
+}
