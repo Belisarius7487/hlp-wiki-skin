@@ -1862,3 +1862,33 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 .hlp-page table[cellpadding="10"][style*="AA2020" i] {
 	margin-bottom: 1.5em !important;
 }
+
+/* ---- Phones: wide tables scroll sideways, floating boxes sit above the text ----
+ * Rounded boxes use overflow:hidden, which cut off content wider than the screen
+ * (e.g. long code lines in FSO table boxes). On narrow screens every top-level table
+ * becomes its own horizontal scroll area, and boxes floated next to the text
+ * (navigation boxes, infoboxes) take the full width instead of squeezing the article. */
+@media ( max-width: 720px ) {
+	.hlp-body .mw-parser-output table:not( table table ):not( :has( > thead ) ) {
+		display: block;
+		max-width: 100%;
+		overflow-x: auto !important;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.hlp-body .mw-parser-output table:not( table table ):not( :has( > thead ) ) > tbody {
+		display: table;
+		width: 100%;
+	}
+
+	.hlp-body .mw-parser-output :is( table, div )[style*="float" i]:not( table table ),
+	.hlp-body .mw-parser-output table[align='right']:not( table table ),
+	.hlp-body .mw-parser-output table[align='left']:not( table table ),
+	.hlp-body .mw-parser-output table.infobox:not( table table ) {
+		float: none !important;
+		max-width: 100% !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		box-sizing: border-box;
+	}
+}
