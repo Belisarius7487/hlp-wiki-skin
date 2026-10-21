@@ -1,6 +1,8 @@
 {
 	"name": "HLPFire",
-	"author": [ "HLP" ],
+	"author": [
+		"HLP"
+	],
 	"url": "https://wiki.hard-light.net",
 	"descriptionmsg": "hlpfire-desc",
 	"namemsg": "skinname-hlpfire",
@@ -18,14 +20,29 @@
 					"responsive": true,
 					"supportsMwHeading": true,
 					"templateDirectory": "templates/",
-					"scripts": [ "skins.hlpfire.scripts" ],
-					"styles": [ "skins.hlpfire.styles" ]
+					"scripts": [
+						"skins.hlpfire.scripts"
+					],
+					"styles": [
+						"skins.hlpfire.styles"
+					],
+					"messages": [
+						"hlpfire-nav-label",
+						"hlpfire-menu-tools",
+						"hlpfire-menu-more",
+						"hlpfire-scheme-fire",
+						"hlpfire-scheme-switch-tooltip",
+						"hlpfire-layout-normal",
+						"hlpfire-layout-switch-tooltip"
+					]
 				}
 			]
 		}
 	},
 	"MessagesDirs": {
-		"HLPFire": [ "i18n" ]
+		"HLPFire": [
+			"i18n"
+		]
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
@@ -44,11 +61,21 @@
 				"logo": true
 			},
 			"styles": {
-				"resources/skins.hlpfire.styles/main.css": { "media": "screen" }
+				"resources/skins.hlpfire.styles/main.css": {
+					"media": "screen"
+				}
 			}
 		},
 		"skins.hlpfire.scripts": {
-			"packageFiles": [ "resources/skins.hlpfire.scripts/main.js" ]
+			"packageFiles": [
+				"resources/skins.hlpfire.scripts/main.js"
+			],
+			"messages": [
+				"hlpfire-scheme-fire",
+				"hlpfire-scheme-void",
+				"hlpfire-layout-normal",
+				"hlpfire-layout-wide"
+			]
 		}
 	},
 	"manifest_version": 2

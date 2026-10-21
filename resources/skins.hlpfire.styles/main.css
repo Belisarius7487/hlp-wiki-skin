@@ -6,51 +6,49 @@
 
 /* ---- Palette: Fire (default) ---- */
 :root {
-	--bg: #1e1a1a;
-	--panel: #2b1617;
-	--panel2: #190b0b;
-	--active: #5e3832;
-	--line: #4b2323;
-	--line2: #6e341e;
-	--link: #ec965f;
-	--linkhov: #fdbf92;
-	--hi: #c89b69;
-	--code: #d2beaa;
-	--muted: #beaa94;
-	--soft: #c8b49e;
-	--text: #c9baa8;
-	--text2: #e1cdb6;
-	--accent: #e0532a;
-	--glow: 232, 84, 32;
+	--hlp-bg: #1e1a1a;
+	--hlp-panel: #2b1617;
+	--hlp-panel-2: #190b0b;
+	--hlp-active: #5e3832;
+	--hlp-line: #4b2323;
+	--hlp-line-2: #6e341e;
+	--hlp-link: #ec965f;
+	--hlp-link-hover: #fdbf92;
+	--hlp-highlight: #c89b69;
+	--hlp-code: #d2beaa;
+	--hlp-muted: #beaa94;
+	--hlp-text: #c9baa8;
+	--hlp-text-2: #e1cdb6;
+	--hlp-accent: #e0532a;
+	--hlp-glow-rgb: 232, 84, 32;
 	color-scheme: dark;
 }
 
 /* ---- Palette: Void ---- */
 html.hlp-void {
-	--bg: #0e0a18;
-	--panel: #1c0d36;
-	--panel2: #100620;
-	--active: #421c74;
-	--line: #481c70;
-	--line2: #822ec8;
-	--link: #b491ff;
-	--linkhov: #c35fff;
-	--hi: #be9bf0;
-	--code: #d2bef0;
-	--muted: #b9a0e6;
-	--soft: #c8aff0;
-	--text: #c9bde6;
-	--text2: #e1cdff;
-	--accent: #a63df0;
-	--glow: 175, 70, 245;
+	--hlp-bg: #0e0a18;
+	--hlp-panel: #1c0d36;
+	--hlp-panel-2: #100620;
+	--hlp-active: #421c74;
+	--hlp-line: #481c70;
+	--hlp-line-2: #822ec8;
+	--hlp-link: #b491ff;
+	--hlp-link-hover: #c35fff;
+	--hlp-highlight: #be9bf0;
+	--hlp-code: #d2bef0;
+	--hlp-muted: #b9a0e6;
+	--hlp-text: #c9bde6;
+	--hlp-text-2: #e1cdff;
+	--hlp-accent: #a63df0;
+	--hlp-glow-rgb: 175, 70, 245;
 }
 
 /* ---- Base ---- */
 html,
 body {
 	margin: 0;
-	background: var( --bg );
-	color: var( --text );
+	background: var( --hlp-bg );
+	color: var( --hlp-text );
 }
 
 body {
@@ -58,13 +56,13 @@ body {
 }
 
 a {
-	color: var( --link );
+	color: var( --hlp-link );
 	text-decoration: none;
 }
 
 a:hover,
 a:focus {
-	color: var( --linkhov );
+	color: var( --hlp-link-hover );
 	text-decoration: underline;
 }
 
@@ -74,7 +72,7 @@ a.new:visited {
 }
 
 :focus-visible {
-	outline: 2px solid var( --accent );
+	outline: 2px solid var( --hlp-accent );
 	outline-offset: 2px;
 }
 
@@ -87,9 +85,9 @@ img {
 .hlp-header {
 	position: relative;
 	z-index: 20;
-	background: var( --panel );
-	border-bottom: 2px solid var( --accent );
-	box-shadow: 0 0 0 1px rgba( var( --glow ), 0.55 ), 0 4px 18px rgba( var( --glow ), 0.5 ), 0 10px 40px rgba( var( --glow ), 0.25 );
+	background: var( --hlp-panel );
+	border-bottom: 2px solid var( --hlp-accent );
+	box-shadow: 0 0 0 1px rgba( var( --hlp-glow-rgb ), 0.55 ), 0 4px 18px rgba( var( --hlp-glow-rgb ), 0.5 ), 0 10px 40px rgba( var( --hlp-glow-rgb ), 0.25 );
 }
 
 .hlp-header-inner {
@@ -128,7 +126,7 @@ img {
 	font-size: 24px;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
-	text-shadow: 0 0 14px rgba( var( --glow ), 0.6 );
+	text-shadow: 0 0 14px rgba( var( --hlp-glow-rgb ), 0.6 );
 }
 
 /* ---- Navigation, menus ---- */
@@ -162,7 +160,7 @@ img {
 	display: block;
 	padding: 8px 14px;
 	border-radius: 6px;
-	color: var( --text2 );
+	color: var( --hlp-text-2 );
 	font-weight: 500;
 	cursor: pointer;
 	list-style: none;
@@ -178,7 +176,7 @@ img {
 
 .hlp-nav li a:hover,
 .hlp-menu > summary:hover {
-	background: var( --active );
+	background: var( --hlp-active );
 	color: #fff;
 	text-decoration: none;
 }
@@ -194,10 +192,10 @@ img {
 	left: 0;
 	min-width: 220px;
 	padding: 10px 14px;
-	background: var( --panel );
-	border: 1px solid var( --line2 );
+	background: var( --hlp-panel );
+	border: 1px solid var( --hlp-line-2 );
 	border-radius: 8px;
-	box-shadow: 0 0 16px rgba( var( --glow ), 0.35 );
+	box-shadow: 0 0 16px rgba( var( --hlp-glow-rgb ), 0.35 );
 }
 
 .hlp-portlet h3 {
@@ -205,7 +203,7 @@ img {
 	font-size: 13px;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
-	color: var( --hi );
+	color: var( --hlp-highlight );
 }
 
 .hlp-menu-panel li a {
@@ -227,9 +225,9 @@ img {
 	height: 44px;
 	box-sizing: border-box;
 	padding: 0 14px;
-	background: var( --bg );
-	color: var( --text2 );
-	border: 1px solid var( --line2 );
+	background: var( --hlp-bg );
+	color: var( --hlp-text-2 );
+	border: 1px solid var( --hlp-line-2 );
 	border-radius: 8px;
 	font: inherit;
 }
@@ -238,9 +236,9 @@ img {
 .hlp-search button {
 	height: 44px;
 	padding: 0 14px;
-	background: var( --active );
-	color: var( --text2 );
-	border: 1px solid var( --line2 );
+	background: var( --hlp-active );
+	color: var( --hlp-text-2 );
+	border: 1px solid var( --hlp-line-2 );
 	border-radius: 8px;
 	font: inherit;
 	cursor: pointer;
@@ -251,18 +249,18 @@ img {
 	height: 44px;
 	padding: 0 16px;
 	border-radius: 8px;
-	border: 1px solid var( --line2 );
-	background: var( --panel );
-	color: var( --hi );
+	border: 1px solid var( --hlp-line-2 );
+	background: var( --hlp-panel );
+	color: var( --hlp-highlight );
 	font: inherit;
 	font-weight: 600;
 	cursor: pointer;
-	box-shadow: 0 0 10px rgba( var( --glow ), 0.4 );
+	box-shadow: 0 0 10px rgba( var( --hlp-glow-rgb ), 0.4 );
 }
 
 #hlp-scheme-switch:hover,
 #hlp-layout-switch:hover {
-	box-shadow: 0 0 16px rgba( var( --glow ), 0.8 );
+	box-shadow: 0 0 16px rgba( var( --hlp-glow-rgb ), 0.8 );
 }
 
 .hlp-personal ul {
@@ -272,7 +270,7 @@ img {
 }
 
 .hlp-personal li a {
-	color: var( --hi );
+	color: var( --hlp-highlight );
 	font-size: 14px;
 }
 
@@ -307,7 +305,7 @@ img {
 	align-items: flex-end;
 	justify-content: space-between;
 	gap: 12px;
-	border-bottom: 1px solid var( --line );
+	border-bottom: 1px solid var( --hlp-line );
 	padding-bottom: 12px;
 	margin-bottom: 16px;
 }
@@ -319,7 +317,7 @@ img {
 	font-size: 40px;
 	line-height: 1.15;
 	color: #fff;
-	text-shadow: 0 0 18px rgba( var( --glow ), 0.65 );
+	text-shadow: 0 0 18px rgba( var( --hlp-glow-rgb ), 0.65 );
 }
 
 .hlp-tabs {
@@ -340,22 +338,22 @@ img {
 	display: block;
 	padding: 6px 14px;
 	border-radius: 6px;
-	background: var( --panel );
-	color: var( --text2 );
-	border: 1px solid var( --line );
+	background: var( --hlp-panel );
+	color: var( --hlp-text-2 );
+	border: 1px solid var( --hlp-line );
 	font-size: 14px;
 }
 
 .hlp-tabs li.selected a {
-	background: var( --active );
+	background: var( --hlp-active );
 	color: #fff;
-	border-color: var( --accent );
-	box-shadow: 0 0 10px rgba( var( --glow ), 0.55 );
+	border-color: var( --hlp-accent );
+	box-shadow: 0 0 10px rgba( var( --hlp-glow-rgb ), 0.55 );
 }
 
 .hlp-tabs li a:hover,
 .hlp-actions > summary:hover {
-	background: var( --active );
+	background: var( --hlp-active );
 	text-decoration: none;
 }
 
@@ -377,7 +375,7 @@ img {
 	font-size: 28px;
 	margin: 36px 0 12px;
 	padding-bottom: 6px;
-	border-bottom: 1px solid var( --line );
+	border-bottom: 1px solid var( --hlp-line );
 }
 
 .hlp-body h3 {
@@ -388,7 +386,7 @@ img {
 .mw-editsection,
 .mw-editsection a {
 	font-size: 13px;
-	color: var( --muted );
+	color: var( --hlp-muted );
 }
 
 .hlp-body p {
@@ -397,9 +395,9 @@ img {
 
 .hlp-body pre,
 .hlp-body code {
-	background: var( --panel2 );
-	color: var( --code );
-	border: 1px solid var( --line );
+	background: var( --hlp-panel-2 );
+	color: var( --hlp-code );
+	border: 1px solid var( --hlp-line );
 	border-radius: 6px;
 	font-family: ui-monospace, Menlo, Consolas, monospace;
 }
@@ -421,30 +419,30 @@ img {
 }
 
 table.wikitable {
-	background: var( --panel );
-	border: 1px solid var( --line );
+	background: var( --hlp-panel );
+	border: 1px solid var( --hlp-line );
 	border-collapse: collapse;
-	color: var( --text );
+	color: var( --hlp-text );
 }
 
 table.wikitable > * > tr > th,
 table.wikitable > * > tr > td {
-	border: 1px solid var( --line );
+	border: 1px solid var( --hlp-line );
 	padding: 0.35em 0.6em;
 }
 
 table.wikitable > * > tr > th {
-	background: var( --active );
-	color: var( --text2 );
+	background: var( --hlp-active );
+	color: var( --hlp-text-2 );
 }
 
 .thumbinner,
 #catlinks,
 .mw-message-box,
 .mw-warning-with-logexcerpt {
-	background: var( --panel );
-	border: 1px solid var( --line );
-	color: var( --text );
+	background: var( --hlp-panel );
+	border: 1px solid var( --hlp-line );
+	color: var( --hlp-text );
 }
 
 #catlinks {
@@ -455,7 +453,7 @@ table.wikitable > * > tr > th {
 
 hr {
 	border: 0;
-	border-top: 1px solid var( --line );
+	border-top: 1px solid var( --hlp-line );
 }
 
 input[type='text'],
@@ -464,9 +462,9 @@ input[type='password'],
 input[type='email'],
 textarea,
 select {
-	background: var( --panel2 );
-	color: var( --text2 );
-	border: 1px solid var( --line2 );
+	background: var( --hlp-panel-2 );
+	color: var( --hlp-text-2 );
+	border: 1px solid var( --hlp-line-2 );
 	border-radius: 4px;
 	font: inherit;
 }
@@ -474,9 +472,9 @@ select {
 button,
 input[type='submit'],
 .cdx-button {
-	background: var( --active );
-	color: var( --text2 );
-	border: 1px solid var( --line2 );
+	background: var( --hlp-active );
+	color: var( --hlp-text-2 );
+	border: 1px solid var( --hlp-line-2 );
 	border-radius: 4px;
 	font: inherit;
 	cursor: pointer;
@@ -486,12 +484,12 @@ input[type='submit'],
 .hlp-aside #toc,
 .hlp-aside #mw-toc,
 .hlp-aside .toc {
-	background: var( --panel );
-	border: 1px solid rgba( var( --glow ), 0.35 );
-	border-top: 3px solid var( --accent );
+	background: var( --hlp-panel );
+	border: 1px solid rgba( var( --hlp-glow-rgb ), 0.35 );
+	border-top: 3px solid var( --hlp-accent );
 	border-radius: 8px;
 	padding: 14px 16px;
-	box-shadow: 0 0 16px rgba( var( --glow ), 0.3 ), 0 0 36px rgba( var( --glow ), 0.15 );
+	box-shadow: 0 0 16px rgba( var( --hlp-glow-rgb ), 0.3 ), 0 0 36px rgba( var( --hlp-glow-rgb ), 0.15 );
 	font-size: 15px;
 	max-height: calc( 100vh - 48px );
 	overflow-y: auto;
@@ -519,17 +517,17 @@ input[type='submit'],
 	font-size: 16px;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
-	color: var( --hi );
+	color: var( --hlp-highlight );
 }
 
 /* ---- Footer ---- */
 .hlp-footer {
-	border-top: 1px solid var( --line );
-	background: var( --panel2 );
+	border-top: 1px solid var( --hlp-line );
+	background: var( --hlp-panel-2 );
 	padding: 20px 24px;
 	text-align: center;
 	font-size: 14px;
-	color: var( --muted );
+	color: var( --hlp-muted );
 }
 
 .hlp-footer ul {
@@ -548,12 +546,12 @@ input[type='submit'],
 .hlp-page a:visited,
 .hlp-page a.external,
 .hlp-page a.external:visited {
-	color: var( --link );
+	color: var( --hlp-link );
 }
 
 .hlp-page a:visited:hover,
 .hlp-page a.external:hover {
-	color: var( --linkhov );
+	color: var( --hlp-link-hover );
 }
 
 .hlp-page a.new,
@@ -570,12 +568,12 @@ input[type='submit'],
 .hlp-page .hlp-nav li a:visited,
 .hlp-page .hlp-tabs li a,
 .hlp-page .hlp-tabs li a:visited {
-	color: var( --text2 );
+	color: var( --hlp-text-2 );
 }
 
 .hlp-page .hlp-personal li a,
 .hlp-page .hlp-personal li a:visited {
-	color: var( --hi );
+	color: var( --hlp-highlight );
 }
 
 /* ---- Search: hide the extra "Go" button, the Enter key does the same ---- */
@@ -587,12 +585,12 @@ input[type='submit'],
 /* ---- Table of contents details ---- */
 .hlp-aside .tocnumber,
 .hlp-aside .toctogglespan {
-	color: var( --muted );
+	color: var( --hlp-muted );
 }
 
 .hlp-aside .toctogglelabel,
 .hlp-aside .toctogglelabel:visited {
-	color: var( --link );
+	color: var( --hlp-link );
 }
 
 /* ---- Narrower screens: menu moves to its own row ---- */
@@ -631,40 +629,40 @@ input[type='submit'],
  * FSO version boxes use other colours and are not matched. */
 .hlp-page [style*="background:\20 #000" i],
 .hlp-page [style*="background:#000" i] {
-	background: var(--bg) !important;
+	background: var( --hlp-bg ) !important;
 }
 html.hlp-void .hlp-page [style*="#512020" i] {
-	background: var(--active) !important;
+	background: var( --hlp-active ) !important;
 }
 html.hlp-void .hlp-page [style*="#302020" i] {
-	background: var(--panel) !important;
+	background: var( --hlp-panel ) !important;
 }
 html.hlp-void .hlp-page [style*="#462424" i] {
-	background: var(--panel) !important;
+	background: var( --hlp-panel ) !important;
 }
 html.hlp-void .hlp-page [style*="#AA2020" i] {
-	border-color: var(--accent) !important;
+	border-color: var( --hlp-accent ) !important;
 }
 
 /* ---- Revision history and form buttons: replace the default light blocks ---- */
 .hlp-page #pagehistory li.selected,
 .hlp-page .mw-changeslist li.selected {
-	background: var(--panel) !important;
-	border-color: var(--line2) !important;
+	background: var( --hlp-panel ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
 .hlp-page .hlp-main input[type="submit"],
 .hlp-page .hlp-main input[type="button"],
-.hlp-page .hlp-main .cdx-button:not(.cdx-button--action-progressive) {
-	background: var(--panel) !important;
-	color: var(--text2) !important;
-	border: 1px solid var(--line2) !important;
+.hlp-page .hlp-main .cdx-button:not( .cdx-button--action-progressive ) {
+	background: var( --hlp-panel ) !important;
+	color: var( --hlp-text-2 ) !important;
+	border: 1px solid var( --hlp-line-2 ) !important;
 	border-radius: 4px;
 	cursor: pointer;
 }
 .hlp-page .hlp-main input[type="submit"]:hover,
 .hlp-page .hlp-main input[type="button"]:hover,
-.hlp-page .hlp-main .cdx-button:not(.cdx-button--action-progressive):hover {
-	background: var(--active) !important;
+.hlp-page .hlp-main .cdx-button:not( .cdx-button--action-progressive ):hover {
+	background: var( --hlp-active ) !important;
 }
 
 /* ---- MediaWiki form widgets (OOUI / Codex): inputs, dropdowns, buttons ---- */
@@ -678,33 +676,33 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page .cdx-select-vue__handle,
 .hlp-page select,
 .hlp-page textarea {
-	background: var(--panel2) !important;
-	color: var(--text2) !important;
-	border-color: var(--line2) !important;
+	background: var( --hlp-panel-2 ) !important;
+	color: var( --hlp-text-2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
 .hlp-page .oo-ui-labelElement-label,
 .hlp-page .oo-ui-menuOptionWidget .oo-ui-labelElement-label {
-	color: var(--text2);
+	color: var( --hlp-text-2 );
 }
 .hlp-page .oo-ui-menuOptionWidget.oo-ui-optionWidget-highlighted,
 .hlp-page .oo-ui-menuOptionWidget:hover {
-	background: var(--active) !important;
+	background: var( --hlp-active ) !important;
 }
 .hlp-page .oo-ui-buttonElement-framed > .oo-ui-buttonElement-button {
-	background: var(--panel) !important;
-	color: var(--text2) !important;
-	border-color: var(--line2) !important;
+	background: var( --hlp-panel ) !important;
+	color: var( --hlp-text-2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
 .hlp-page .oo-ui-flaggedElement-progressive.oo-ui-buttonElement-framed > .oo-ui-buttonElement-button,
 .hlp-page .cdx-button--action-progressive {
-	background: var(--accent) !important;
+	background: var( --hlp-accent ) !important;
 	color: #fff !important;
-	border-color: var(--accent) !important;
+	border-color: var( --hlp-accent ) !important;
 }
 .hlp-page fieldset,
 .hlp-page .oo-ui-fieldsetLayout {
 	background: transparent;
-	border-color: var(--line2);
+	border-color: var( --hlp-line-2 );
 }
 
 /* ---- Widgets rendered outside .hlp-page (dropdown lists, popups, date input) ---- */
@@ -713,81 +711,39 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .oo-ui-popupWidget-head,
 .oo-ui-dropdownWidget-handle,
 .oo-ui-inputWidget-input,
-.oo-ui-dateInputWidget .oo-ui-inputWidget-input,
-.mw-widgets-dateInputWidget .oo-ui-inputWidget-input,
 .oo-ui-textInputWidget .oo-ui-inputWidget-input,
-.oo-ui-capsuleMultiselectWidget,
 .oo-ui-tagMultiselectWidget-input,
 .oo-ui-tagMultiselectWidget-multilineTextInputWidget,
 .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled .oo-ui-tagMultiselectWidget-handle,
 .cdx-select-menu,
 .cdx-menu,
 .cdx-popover {
-	background: var(--panel2) !important;
-	color: var(--text2) !important;
-	border-color: var(--line2) !important;
+	background: var( --hlp-panel-2 ) !important;
+	color: var( --hlp-text-2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
 .oo-ui-inputWidget-input::placeholder,
 .oo-ui-inputWidget-input[placeholder]:empty::before {
-	color: var(--muted) !important;
+	color: var( --hlp-muted ) !important;
 }
 .oo-ui-menuOptionWidget,
 .oo-ui-menuOptionWidget .oo-ui-labelElement-label,
 .oo-ui-optionWidget .oo-ui-labelElement-label {
-	color: var(--text2) !important;
+	color: var( --hlp-text-2 ) !important;
 }
 .oo-ui-optionWidget-selected,
 .oo-ui-menuOptionWidget.oo-ui-optionWidget-highlighted,
 .oo-ui-menuOptionWidget:hover,
 .oo-ui-optionWidget.oo-ui-optionWidget-highlighted {
-	background: var(--active) !important;
+	background: var( --hlp-active ) !important;
 }
 /* Dark icons and arrows (SVG backgrounds) are inverted to light */
 .oo-ui-indicatorElement-indicator,
 .oo-ui-iconElement-icon,
 .cdx-select-vue__indicator,
 .cdx-icon {
-	filter: invert(1) brightness(1.2);
+	filter: invert( 1 ) brightness( 1.2 );
 	opacity: 0.9;
-}
-
-/* ---- Date input (idle display) and calendar popup ---- */
-.mw-widgets-dateInputWidget-handle,
-.mw-widgets-dateInputWidget .oo-ui-inputWidget-input,
-.mw-widgets-dateInputWidget .mw-widgets-dateInputWidget-handle,
-.mw-widgets-dateInputWidget .oo-ui-textInputWidget,
-.mw-widgets-calendarWidget,
-.mw-widgets-calendarWidget-item,
-.mw-widgets-calendarWidget-day,
-.mw-widgets-calendarWidget-labelButton,
-.oo-ui-calendarWidget,
-.oo-ui-calendarWidget .oo-ui-buttonElement-button {
-	background: var(--panel2) !important;
-	color: var(--text2) !important;
-	border-color: var(--line2) !important;
-}
-.mw-widgets-dateInputWidget-handle,
-.mw-widgets-dateInputWidget-handle .oo-ui-labelElement-label,
-.mw-widgets-dateInputWidget-handle .oo-ui-inputWidget-input {
-	color: var(--text2) !important;
-}
-.mw-widgets-calendarWidget-item,
-.mw-widgets-calendarWidget-day,
-.mw-widgets-calendarWidget-labelButton {
-	color: var(--text2) !important;
-}
-.mw-widgets-calendarWidget-item:hover,
-.mw-widgets-calendarWidget-day:hover,
-.mw-widgets-calendarWidget-item-selected,
-.mw-widgets-calendarWidget-item-selected:hover {
-	background: var(--active) !important;
-}
-.mw-widgets-calendarWidget-day-heading,
-.mw-widgets-calendarWidget-item-inactive,
-.mw-widgets-calendarWidget-day-additional,
-.mw-widgets-calendarWidget-day-heading .oo-ui-labelElement-label {
-	color: var(--muted) !important;
-	background: transparent !important;
 }
 
 /* ---- Popups in general (calendar etc.): dark panel, transparent children ---- */
@@ -795,19 +751,19 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .oo-ui-popupWidget-body,
 .oo-ui-popupWidget-anchor::before,
 .oo-ui-popupWidget-anchor::after {
-	background: var(--panel2) !important;
-	border-color: var(--line2) !important;
+	background: var( --hlp-panel-2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
-.oo-ui-popupWidget-popup *:not(.oo-ui-indicatorElement-indicator):not(.oo-ui-iconElement-icon) {
+.oo-ui-popupWidget-popup *:not( .oo-ui-indicatorElement-indicator ):not( .oo-ui-iconElement-icon ) {
 	background-color: transparent !important;
-	color: var(--text2) !important;
-	border-color: var(--line2) !important;
+	color: var( --hlp-text-2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
 .oo-ui-popupWidget-popup button:hover,
 .oo-ui-popupWidget-popup [class*="-item"]:hover,
 .oo-ui-popupWidget-popup [class*="-day"]:hover,
 .oo-ui-popupWidget-popup [class*="selected"] {
-	background-color: var(--active) !important;
+	background-color: var( --hlp-active ) !important;
 }
 
 /* ---- Highlighted rows in revision history: readable text ---- */
@@ -816,29 +772,16 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 #pagehistory li.selected .history-size,
 #pagehistory li.selected .mw-changeslist-separator,
 #pagehistory li.selected abbr {
-	color: var(--text2) !important;
+	color: var( --hlp-text-2 ) !important;
 }
 
 /* ---- Interwiki links (e.g. Wikipedia links in templates) use the theme link colour ---- */
 .hlp-page a.extiw,
 .hlp-page a.extiw:visited {
-	color: var( --link );
+	color: var( --hlp-link );
 }
 .hlp-page a.extiw:hover {
-	color: var( --linkhov );
-}
-
-/* ---- Image frames in current MediaWiki markup (figure elements) ---- */
-.hlp-page figure[typeof~='mw:File/Thumb'],
-.hlp-page figure[typeof~='mw:File/Frame'] {
-	background: var( --panel );
-	border: 1px solid var( --line );
-	color: var( --text );
-}
-.hlp-page figure[typeof~='mw:File/Thumb'] > figcaption,
-.hlp-page figure[typeof~='mw:File/Frame'] > figcaption {
-	background: transparent;
-	color: var( --muted );
+	color: var( --hlp-link-hover );
 }
 
 /* ---- Main Page boxes (Featured Article, Screenshots): restyled as theme cards ----
@@ -847,12 +790,8 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
  * width="620px"); if a template changes, only that card falls back to its own look. */
 /* The wrapper becomes a plain block: it fills the space left of the floated navigation box. */
 .hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ),
-.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ),
-.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody,
 .hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody,
 .hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody > tr,
-.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody > tr,
-.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody > tr > td,
 .hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) > tbody > tr > td {
 	display: block;
 	width: auto !important;
@@ -863,20 +802,20 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 	float: none !important;
 	width: 100% !important;
 	margin: 0 0 1.5em 0 !important;
-	background: var( --panel ) !important;
-	border: 1px solid var( --line2 ) !important;
+	background: var( --hlp-panel ) !important;
+	border: 1px solid var( --hlp-line-2 ) !important;
 	border-radius: 10px;
 	border-collapse: separate !important;
 	border-spacing: 0;
 	overflow: hidden;
-	box-shadow: 0 0 18px rgba( var( --glow ), 0.18 );
+	box-shadow: 0 0 18px rgba( var( --hlp-glow-rgb ), 0.18 );
 }
 .hlp-page table[width="65%"][style*="AA2020" i] > * > tr > th,
 .hlp-page table[width="620px"][style*="AA2020" i] > * > tr > th {
-	background: linear-gradient( 180deg, var( --active ), var( --panel ) ) !important;
-	color: var( --text2 ) !important;
+	background: linear-gradient( 180deg, var( --hlp-active ), var( --hlp-panel ) ) !important;
+	color: var( --hlp-text-2 ) !important;
 	padding: 10px 14px;
-	border-bottom: 1px solid var( --line2 );
+	border-bottom: 1px solid var( --hlp-line-2 );
 }
 .hlp-page table[width="65%"] table,
 .hlp-page table[width="620px"] table {
@@ -911,7 +850,6 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 }
 
 /* The wrapper is its own formatting context, so it sits beside the floated navigation box. */
-.hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ),
 .hlp-page table:has( table[width="65%"] ):has( table[width="620px"] ) {
 	display: flow-root;
 }
@@ -921,27 +859,27 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 /* File pages: tab bar, file history table, thumbnails */
 .hlp-page #filetoc,
 .hlp-page .mw-filepage-resolutioninfo {
-	background: var( --panel );
-	border: 1px solid var( --line );
-	color: var( --text );
+	background: var( --hlp-panel );
+	border: 1px solid var( --hlp-line );
+	color: var( --hlp-text );
 	border-radius: 6px;
 }
 .hlp-page table.filehistory,
 .hlp-page table.filehistory td,
 .hlp-page table.filehistory th {
-	background: var( --panel );
-	color: var( --text );
-	border-color: var( --line );
+	background: var( --hlp-panel );
+	color: var( --hlp-text );
+	border-color: var( --hlp-line );
 }
 .hlp-page table.filehistory th {
-	background: var( --active );
-	color: var( --text2 );
+	background: var( --hlp-active );
+	color: var( --hlp-text-2 );
 }
 .hlp-page table.filehistory td img,
 .hlp-page .thumb img,
 .hlp-page .thumbimage {
-	background: var( --panel2 );
-	border-color: var( --line );
+	background: var( --hlp-panel-2 );
+	border-color: var( --hlp-line );
 }
 
 /* Generic data tables and boxes from core and extensions */
@@ -954,26 +892,26 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page table.mw-search-results,
 .hlp-page .mw-search-result-heading,
 .hlp-page .searchresult {
-	background: var( --panel );
-	color: var( --text );
-	border-color: var( --line );
+	background: var( --hlp-panel );
+	color: var( --hlp-text );
+	border-color: var( --hlp-line );
 }
 .hlp-page table.mw-datatable th {
-	background: var( --active );
-	color: var( --text2 );
+	background: var( --hlp-active );
+	color: var( --hlp-text-2 );
 }
 .hlp-page table.wikitable td {
-	background: var( --panel );
-	color: var( --text );
-	border-color: var( --line );
+	background: var( --hlp-panel );
+	color: var( --hlp-text );
+	border-color: var( --hlp-line );
 }
 
 /* Diff view (comparing revisions) */
 .hlp-page table.diff,
 .hlp-page table.diff td {
-	background: var( --panel2 );
-	color: var( --text );
-	border-color: var( --line );
+	background: var( --hlp-panel-2 );
+	color: var( --hlp-text );
+	border-color: var( --hlp-line );
 }
 .hlp-page td.diff-addedline {
 	background: rgba( 60, 140, 80, 0.18 );
@@ -982,14 +920,14 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 	background: rgba( 190, 60, 60, 0.20 );
 }
 .hlp-page td.diff-context {
-	background: var( --panel );
+	background: var( --hlp-panel );
 }
 .hlp-page td.diff-marker,
 .hlp-page .diff-lineno {
-	color: var( --muted );
+	color: var( --hlp-muted );
 }
 .hlp-page .diffchange {
-	color: var( --text2 );
+	color: var( --hlp-text-2 );
 	background: rgba( 255, 255, 255, 0.12 );
 }
 
@@ -1001,27 +939,27 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page .oo-ui-panelLayout-expanded,
 .hlp-page .oo-ui-indexLayout-stackLayout,
 .hlp-page .oo-ui-tabPanelLayout {
-	background: var( --panel );
-	color: var( --text );
-	border-color: var( --line );
+	background: var( --hlp-panel );
+	color: var( --hlp-text );
+	border-color: var( --hlp-line );
 }
 .hlp-page .oo-ui-menuLayout-menu,
 .hlp-page .oo-ui-tabSelectWidget,
 .hlp-page .oo-ui-tabOptionWidget {
-	background: var( --panel2 );
-	color: var( --text2 );
+	background: var( --hlp-panel-2 );
+	color: var( --hlp-text-2 );
 }
 .hlp-page .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
-	background: var( --active );
+	background: var( --hlp-active );
 }
 .hlp-page .cdx-message,
 .hlp-page .mw-message-box,
 .hlp-page .errorbox,
 .hlp-page .warningbox,
 .hlp-page .successbox {
-	background: var( --panel );
-	color: var( --text );
-	border-color: var( --line2 );
+	background: var( --hlp-panel );
+	color: var( --hlp-text );
+	border-color: var( --hlp-line-2 );
 }
 .hlp-page .errorbox,
 .hlp-page .cdx-message--error {
@@ -1029,14 +967,14 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 }
 .hlp-page .mw-ui-button,
 .hlp-page .mw-ui-button:visited {
-	background: var( --panel );
-	color: var( --text2 );
-	border: 1px solid var( --line2 );
+	background: var( --hlp-panel );
+	color: var( --hlp-text-2 );
+	border: 1px solid var( --hlp-line-2 );
 }
 .hlp-page .mw-ui-button.mw-ui-progressive {
-	background: var( --accent );
+	background: var( --hlp-accent );
 	color: #fff;
-	border-color: var( --accent );
+	border-color: var( --hlp-accent );
 }
 
 /* ---- More black/white default blocks (round 3) ---- */
@@ -1051,7 +989,7 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page [bgcolor="#000000"],
 .hlp-page [bgcolor="#000"],
 .hlp-page [bgcolor="black"] {
-	background: var( --bg ) !important;
+	background: var( --hlp-bg ) !important;
 }
 
 /* Edit page: option area, summary, checkboxes, buttons row */
@@ -1064,12 +1002,12 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page .mw-prefs-buttons,
 .hlp-page .oo-ui-fieldLayout-field {
 	background: transparent !important;
-	color: var( --text ) !important;
-	border-color: var( --line ) !important;
+	color: var( --hlp-text ) !important;
+	border-color: var( --hlp-line ) !important;
 }
 .hlp-page .editOptions {
-	background: var( --panel ) !important;
-	border: 1px solid var( --line );
+	background: var( --hlp-panel ) !important;
+	border: 1px solid var( --hlp-line );
 	border-radius: 6px;
 }
 .hlp-page .editOptions label,
@@ -1077,15 +1015,15 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page #wpSummaryLabel,
 .hlp-page .mw-summary label,
 .hlp-page .oo-ui-fieldLayout-header .oo-ui-labelElement-label {
-	color: var( --text2 ) !important;
+	color: var( --hlp-text-2 ) !important;
 }
 .hlp-page .editOptions input[type="checkbox"],
 .hlp-page input[type="checkbox"] {
-	accent-color: var( --accent );
+	accent-color: var( --hlp-accent );
 }
 .hlp-page .cancelLink a,
 .hlp-page .cancelLink {
-	color: var( --link ) !important;
+	color: var( --hlp-link ) !important;
 }
 
 /* Disabled inputs: dark and readable instead of white with pale text */
@@ -1095,10 +1033,10 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page input:disabled,
 .hlp-page textarea:disabled,
 .hlp-page select:disabled {
-	background: var( --panel2 ) !important;
-	color: var( --muted ) !important;
-	-webkit-text-fill-color: var( --muted );
-	border-color: var( --line ) !important;
+	background: var( --hlp-panel-2 ) !important;
+	color: var( --hlp-muted ) !important;
+	-webkit-text-fill-color: var( --hlp-muted );
+	border-color: var( --hlp-line ) !important;
 }
 
 /* Recent changes filter bar */
@@ -1116,19 +1054,19 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .mw-rcfilters-ui-filterMenuHeaderWidget,
 .mw-rcfilters-ui-changesListWrapperWidget,
 .mw-rcfilters-ui-savedLinksListWidget {
-	background: var( --panel2 ) !important;
-	color: var( --text2 ) !important;
-	border-color: var( --line2 ) !important;
+	background: var( --hlp-panel-2 ) !important;
+	color: var( --hlp-text-2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
 .oo-ui-tagItemWidget,
 .oo-ui-tagItemWidget.oo-ui-widget-enabled,
 .mw-rcfilters-ui-filterTagItemWidget {
-	background: var( --active ) !important;
-	color: var( --text2 ) !important;
-	border-color: var( --line2 ) !important;
+	background: var( --hlp-active ) !important;
+	color: var( --hlp-text-2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
 .oo-ui-tagItemWidget .oo-ui-labelElement-label {
-	color: var( --text2 ) !important;
+	color: var( --hlp-text-2 ) !important;
 }
 
 /* Search suggestions (classic dropdown below the header search box) */
@@ -1140,23 +1078,23 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .mw-searchSuggest-link,
 .cdx-typeahead-search__menu,
 .cdx-typeahead-search__search-footer {
-	background: var( --panel2 ) !important;
-	color: var( --text2 ) !important;
-	border-color: var( --line2 ) !important;
+	background: var( --hlp-panel-2 ) !important;
+	color: var( --hlp-text-2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
 .suggestions-result-current,
 .suggestions-special:hover,
 .suggestions-result:hover {
-	background: var( --active ) !important;
+	background: var( --hlp-active ) !important;
 }
 .suggestions .suggestions-special .special-label,
 .suggestions .suggestions-special .special-query {
-	color: var( --text2 ) !important;
+	color: var( --hlp-text-2 ) !important;
 }
 .suggestions a,
 .suggestions-result a,
 .suggestions-result span {
-	color: var( --text2 );
+	color: var( --hlp-text-2 );
 }
 
 /* ---- Round 4: rounded boxes, spacing, help icon, remaining white blocks ---- */
@@ -1169,7 +1107,7 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 	border-collapse: separate !important;
 	border-spacing: 0;
 	overflow: hidden;
-	border-color: var( --line2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
 /* Comfortable cell padding (:where keeps this easy to override by specific rules above) */
 :where( .hlp-page .hlp-body table[style*="AA2020" i] ) > * > tr > td,
@@ -1189,9 +1127,9 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 /* Special:SpecialPages legend and similar notes */
 .hlp-page .mw-specialpages-notes,
 .hlp-page [class^="mw-specialpages"] {
-	background: var( --panel );
-	color: var( --text );
-	border: 1px solid var( --line );
+	background: var( --hlp-panel );
+	color: var( --hlp-text );
+	border: 1px solid var( --hlp-line );
 	border-radius: 8px;
 	padding: 8px 14px;
 }
@@ -1201,35 +1139,19 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page .oo-ui-textInputWidget.oo-ui-widget-disabled > *,
 .hlp-page .oo-ui-messageWidget,
 .hlp-page .oo-ui-labelWidget {
-	background: var( --panel2 ) !important;
-	color: var( --muted ) !important;
-	border-color: var( --line ) !important;
-}
-
-/* Submit bar in preferences / forms: solid bar instead of a see-through one */
-.hlp-page .mw-prefs-buttons,
-.hlp-page .mw-htmlform-submit-buttons,
-.hlp-page .mw-htmlform-ooui .oo-ui-fieldLayout.mw-htmlform-submit-buttons {
-	background: var( --bg ) !important;
-	padding: 12px 14px;
-	border-top: 1px solid var( --line );
-	border-radius: 0 0 8px 8px;
+	background: var( --hlp-panel-2 ) !important;
+	color: var( --hlp-muted ) !important;
+	border-color: var( --hlp-line ) !important;
 }
 
 /* Image frames: no white borders */
-.hlp-page figure[typeof~='mw:File/Thumb'],
-.hlp-page figure[typeof~='mw:File/Frame'],
-.hlp-page figure[typeof~='mw:File/Thumb'] > figcaption,
 .hlp-page .thumbinner {
-	border-color: var( --line2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
+	border-radius: 8px;
 }
 .hlp-page figure .mw-file-element,
 .hlp-page .thumbimage {
-	border-color: var( --line ) !important;
-}
-.hlp-page figure[typeof~='mw:File/Thumb'],
-.hlp-page .thumbinner {
-	border-radius: 8px;
+	border-color: var( --hlp-line ) !important;
 }
 
 /* ---- Round 5 ---- */
@@ -1242,7 +1164,7 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 }
 .hlp-page .oo-ui-messageWidget {
 	border-radius: 8px;
-	background: var( --panel2 ) !important;
+	background: var( --hlp-panel-2 ) !important;
 }
 .hlp-page .oo-ui-textInputWidget.oo-ui-widget-disabled,
 .hlp-page .oo-ui-textInputWidget.oo-ui-widget-disabled > * {
@@ -1263,7 +1185,7 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 
 /* Horizontal rules: core paints them light */
 .hlp-page hr {
-	background-color: var( --line ) !important;
+	background-color: var( --hlp-line ) !important;
 	border: 0;
 	height: 1px;
 }
@@ -1272,13 +1194,13 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page .hlp-body table.wikitable {
 	border-collapse: separate !important;
 	border-spacing: 0;
-	border: 1px solid var( --line2 ) !important;
+	border: 1px solid var( --hlp-line-2 ) !important;
 	border-radius: 8px;
 	overflow: hidden;
 }
 .hlp-page .hlp-body table.wikitable > * > tr > td,
 .hlp-page .hlp-body table.wikitable > * > tr > th {
-	border-color: var( --line ) !important;
+	border-color: var( --hlp-line ) !important;
 	border-width: 0 1px 1px 0 !important;
 }
 .hlp-page .hlp-body table.wikitable > * > tr > :last-child {
@@ -1306,10 +1228,10 @@ html.hlp-void .hlp-page [style*="#AA2020" i] {
 .hlp-page [style*="1px black" i],
 .hlp-page [style*="solid 1px #000" i],
 .hlp-page [style*="solid 1px black" i] {
-	background: var( --panel ) !important;
-	border: 1px solid var( --line2 ) !important;
+	background: var( --hlp-panel ) !important;
+	border: 1px solid var( --hlp-line-2 ) !important;
 	border-radius: 10px;
-	box-shadow: 0 0 16px rgba( var( --glow ), 0.25 );
+	box-shadow: 0 0 16px rgba( var( --hlp-glow-rgb ), 0.25 );
 	padding: 8px 14px;
 }
 
@@ -1336,20 +1258,20 @@ html.hlp-js .hlp-body .toc {
 .hlp-page .hlp-body .mw-heading2 {
 	margin: 1.6em 0 0.7em;
 	padding-bottom: 4px;
-	border-bottom: 1px solid var( --line2 );
+	border-bottom: 1px solid var( --hlp-line-2 );
 }
 .hlp-page .hlp-body .mw-heading3 {
 	margin: 1.3em 0 0.7em;
 	padding: 6px 14px;
-	background: var( --panel );
-	border: 1px solid var( --line );
-	border-left: 3px solid var( --accent );
+	background: var( --hlp-panel );
+	border: 1px solid var( --hlp-line );
+	border-left: 3px solid var( --hlp-accent );
 	border-radius: 6px;
 }
 .hlp-page .hlp-body .mw-heading4 {
 	margin: 1.1em 0 0.6em;
 	padding: 3px 12px;
-	border-left: 2px solid var( --line2 );
+	border-left: 2px solid var( --hlp-line-2 );
 }
 .hlp-page .hlp-body .mw-heading3 h3,
 .hlp-page .hlp-body .mw-heading4 h4 {
@@ -1361,50 +1283,46 @@ html.hlp-js .hlp-body .toc {
 .hlp-page .hlp-body > h3,
 .hlp-page .hlp-body .mw-parser-output > h3 {
 	padding: 6px 14px;
-	background: var( --panel );
-	border: 1px solid var( --line );
-	border-left: 3px solid var( --accent );
+	background: var( --hlp-panel );
+	border: 1px solid var( --hlp-line );
+	border-left: 3px solid var( --hlp-accent );
 	border-radius: 6px;
 }
 
 /* ---- Void: recolour more template colours (red-brown header, grey rows) ---- */
 html.hlp-void .hlp-page [style*="#3C1E1E" i] {
-	background: var( --active ) !important;
+	background: var( --hlp-active ) !important;
 }
 html.hlp-void .hlp-page [style*="#202020" i] {
-	background: var( --panel ) !important;
+	background: var( --hlp-panel ) !important;
 }
 
 /* ---- Mission navigation (Template:Mission): previous / walkthrough / next as buttons ----
  * Matched by the template's wrapper table (background:#000000, no nested tables). */
 .hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) {
-	border-collapse: separate !important;
-	border-spacing: 10px 8px;
+	display: block;
 	margin: 1em auto;
 	width: auto;
 	background: transparent !important;
 }
 .hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td {
-	background: var( --panel );
-	border: 1px solid var( --line2 );
+	display: block;
+	min-height: 0;
+	background: var( --hlp-panel );
+	border: 1px solid var( --hlp-line-2 );
 	border-radius: 10px;
 	padding: 10px 22px;
 	text-align: center;
+	vertical-align: middle;
 	white-space: nowrap;
 	transition: box-shadow 0.15s, background 0.15s;
 }
 .hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td:hover {
-	background: var( --active );
-	box-shadow: 0 0 14px rgba( var( --glow ), 0.45 );
-}
-.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td:empty {
-	background: none;
-	border: 0;
-	box-shadow: none;
-	padding: 0;
+	background: var( --hlp-active );
+	box-shadow: 0 0 14px rgba( var( --hlp-glow-rgb ), 0.45 );
 }
 .hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td[rowspan] {
-	background: var( --active );
+	background: var( --hlp-active );
 	font-weight: bold;
 }
 .hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td:first-child a::before {
@@ -1418,23 +1336,8 @@ html.hlp-void .hlp-page [style*="#202020" i] {
 	content: none;
 }
 
-/* Mission navigation: cells without a link (e.g. no loop mission) disappear; text is centred vertically */
-.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td {
-	vertical-align: middle;
-}
-.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > * > tr > td:not( :has( a ) ) {
-	background: none;
-	border: 0;
-	box-shadow: none;
-	padding: 0;
-}
-
 /* Mission navigation: lay the cells out as a flexible row of equal-height buttons
- * (the template's rowspan would otherwise stretch them). */
-.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) {
-	display: block;
-	width: auto;
-}
+ * (the template's rowspan would otherwise stretch them). Cells without a link disappear. */
 .hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > tbody {
 	display: flex;
 	flex-wrap: wrap;
@@ -1444,11 +1347,6 @@ html.hlp-void .hlp-page [style*="#202020" i] {
 }
 .hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > tbody > tr {
 	display: contents;
-}
-.hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > tbody > tr > td {
-	display: block;
-	padding: 10px 22px;
-	min-height: 0;
 }
 .hlp-page .hlp-body table[style*="background:#000000" i][cellpadding="8"]:not( :has( table ) ) > tbody > tr > td:not( :has( a ) ) {
 	display: none;
@@ -1465,40 +1363,17 @@ html.hlp-void .hlp-page [style*="#202020" i] {
 	display: none;
 }
 
-/* ---- Void: more reds from templates (notices, banners) ---- */
-html.hlp-void .hlp-page [style*="background:\20 #311" i],
-html.hlp-void .hlp-page [style*="background:#311" i],
-html.hlp-void .hlp-page [style*="background:\20 #522" i],
-html.hlp-void .hlp-page [style*="background:#522" i] {
-	background: var( --active ) !important;
-}
-html.hlp-void .hlp-page [style*="background:\20 #351515" i],
-html.hlp-void .hlp-page [style*="background:#351515" i],
-html.hlp-void .hlp-page [style*="background:\20 #1B0E0E" i],
-html.hlp-void .hlp-page [style*="background:#1B0E0E" i] {
-	background: var( --panel ) !important;
-}
-html.hlp-void .hlp-page [style*="background:\20 #101010" i],
-html.hlp-void .hlp-page [style*="background:#101010" i] {
-	background: var( --panel2 ) !important;
-}
-html.hlp-void .hlp-page [style*="#D33" i],
-html.hlp-void .hlp-page [style*="#811" i],
-html.hlp-void .hlp-page [style*="#522" i] {
-	border-color: var( --accent ) !important;
-}
-
 /* ---- Tables drawn with border="1": theme-coloured lines, rounded outline ---- */
 .hlp-page .hlp-body table[border="1"]:not( [style*="background" i] ) {
 	border-collapse: separate !important;
 	border-spacing: 0;
-	border: 1px solid var( --line2 ) !important;
+	border: 1px solid var( --hlp-line-2 ) !important;
 	border-radius: 8px;
 	overflow: hidden;
 }
 .hlp-page .hlp-body table[border="1"]:not( [style*="background" i] ) > * > tr > td,
 .hlp-page .hlp-body table[border="1"]:not( [style*="background" i] ) > * > tr > th {
-	border-color: var( --line ) !important;
+	border-color: var( --hlp-line ) !important;
 	border-width: 0 1px 1px 0 !important;
 }
 .hlp-page .hlp-body table[border="1"]:not( [style*="background" i] ) > * > tr > :last-child {
@@ -1508,58 +1383,20 @@ html.hlp-void .hlp-page [style*="#522" i] {
 	border-bottom-width: 0 !important;
 }
 
-/* ---- Void: red text in notice boxes becomes light violet (links keep the link colour) ---- */
-html.hlp-void .hlp-page [style*="#D33" i]:not( a ),
-html.hlp-void .hlp-page [style*="#D33" i] *:not( a ),
-html.hlp-void .hlp-page [style*="#811" i] *:not( a ) {
-	color: var( --hi ) !important;
-}
-
-/* Void: red text colour #D44 (e.g. Veteran Comments notice) becomes light violet */
-html.hlp-void .hlp-page [style*="color:#D44" i]:not( a ),
-html.hlp-void .hlp-page [style*="color:\20 #D44" i]:not( a ),
-html.hlp-void .hlp-page [style*="color: #D44" i]:not( a ),
-html.hlp-void .hlp-page [style*="#D44" i] *:not( a ) {
-	color: var( --hi ) !important;
-}
-
-/* Void notice boxes: lighter text, links underlined so they stand out */
-html.hlp-void .hlp-page [style*="#D44" i]:not( a ),
-html.hlp-void .hlp-page [style*="#D44" i] *:not( a ) {
-	color: var( --text2 ) !important;
-}
-html.hlp-void .hlp-page [style*="#D44" i] a {
-	text-decoration: underline;
-}
-
-/* Void: same reds written as background-color (e.g. Veteran Comments box uses #211) */
-html.hlp-void .hlp-page [style*="background-color:\20 #211" i],
-html.hlp-void .hlp-page [style*="background-color:#211" i],
-html.hlp-void .hlp-page [style*="background-color:\20 #1B0E0E" i],
-html.hlp-void .hlp-page [style*="background-color:#1B0E0E" i],
-html.hlp-void .hlp-page [style*="background-color:\20 #351515" i],
-html.hlp-void .hlp-page [style*="background-color:#351515" i] {
-	background: var( --panel ) !important;
-}
-html.hlp-void .hlp-page [style*="background-color:\20 #311" i],
-html.hlp-void .hlp-page [style*="background-color:#311" i],
-html.hlp-void .hlp-page [style*="background-color:\20 #522" i],
-html.hlp-void .hlp-page [style*="background-color:#522" i] {
-	background: var( --active ) !important;
-}
-
 /* Void: in notice banners the text is light and links are saturated violet and underlined */
 html.hlp-void .hlp-page [style*="#D33" i]:not( a ),
 html.hlp-void .hlp-page [style*="#D33" i] *:not( a ),
 html.hlp-void .hlp-page [style*="#811" i] *:not( a ),
-html.hlp-void .hlp-page [style*="#522" i] *:not( a ) {
-	color: var( --text2 ) !important;
+html.hlp-void .hlp-page [style*="#522" i] *:not( a ),
+html.hlp-void .hlp-page [style*="#D44" i]:not( a ),
+html.hlp-void .hlp-page [style*="#D44" i] *:not( a ) {
+	color: var( --hlp-text-2 ) !important;
 }
 html.hlp-void .hlp-page [style*="#D33" i] a,
 html.hlp-void .hlp-page [style*="#811" i] a,
 html.hlp-void .hlp-page [style*="#522" i] a,
 html.hlp-void .hlp-page [style*="#D44" i] a {
-	color: var( --linkhov ) !important;
+	color: var( --hlp-link-hover ) !important;
 	text-decoration: underline;
 }
 
@@ -1625,7 +1462,7 @@ html.hlp-void .hlp-page [style*="background:#402020" i],
 html.hlp-void .hlp-page [style*="background-color:\20 #402020" i],
 html.hlp-void .hlp-page [style*="background-color:#402020" i],
 html.hlp-void .hlp-page [bgcolor="#402020" i] {
-	background: var( --active ) !important;
+	background: var( --hlp-active ) !important;
 }
 html.hlp-void .hlp-page [style*="background:\20 #351515" i],
 html.hlp-void .hlp-page [style*="background:#351515" i],
@@ -1662,7 +1499,7 @@ html.hlp-void .hlp-page [style*="background:#202020" i],
 html.hlp-void .hlp-page [style*="background-color:\20 #202020" i],
 html.hlp-void .hlp-page [style*="background-color:#202020" i],
 html.hlp-void .hlp-page [bgcolor="#202020" i] {
-	background: var( --panel ) !important;
+	background: var( --hlp-panel ) !important;
 }
 html.hlp-void .hlp-page [style*="background:\20 #201010" i],
 html.hlp-void .hlp-page [style*="background:#201010" i],
@@ -1679,7 +1516,7 @@ html.hlp-void .hlp-page [style*="background:#081010" i],
 html.hlp-void .hlp-page [style*="background-color:\20 #081010" i],
 html.hlp-void .hlp-page [style*="background-color:#081010" i],
 html.hlp-void .hlp-page [bgcolor="#081010" i] {
-	background: var( --panel2 ) !important;
+	background: var( --hlp-panel-2 ) !important;
 }
 html.hlp-void .hlp-page [style*="#aa2020" i],
 html.hlp-void .hlp-page [style*="#802020" i],
@@ -1688,7 +1525,7 @@ html.hlp-void .hlp-page [style*="#611" i],
 html.hlp-void .hlp-page [style*="#522" i],
 html.hlp-void .hlp-page [style*="#811" i],
 html.hlp-void .hlp-page [style*="#d33" i] {
-	border-color: var( --line2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
 
 /* ---- Coloured boxes drawn as tables: always rounded ---- */
@@ -1702,26 +1539,26 @@ html.hlp-void .hlp-page [style*="#d33" i] {
 /* ---- Void: links inside coloured boxes stand out from the box text ---- */
 html.hlp-void .hlp-page [style*="background" i] a:not( .new ):not( .mw-selflink ),
 html.hlp-void .hlp-page [bgcolor] a:not( .new ):not( .mw-selflink ) {
-	color: var( --linkhov );
+	color: var( --hlp-link-hover );
 }
 
 /* ---- Image galleries (<gallery>): dark rounded cards instead of white frames ---- */
 .hlp-page ul.gallery .gallerybox,
 .hlp-page ul.gallery .gallerybox .thumb,
 .hlp-page .gallerybox div.thumb {
-	background: var( --panel ) !important;
-	border-color: var( --line ) !important;
+	background: var( --hlp-panel ) !important;
+	border-color: var( --hlp-line ) !important;
 }
 .hlp-page ul.gallery .gallerybox {
 	border-radius: 10px;
 	padding: 6px;
 }
 .hlp-page ul.gallery .gallerybox .thumb {
-	border: 1px solid var( --line );
+	border: 1px solid var( --hlp-line );
 	border-radius: 8px;
 }
 .hlp-page ul.gallery .gallerytext {
-	color: var( --text );
+	color: var( --hlp-text );
 }
 .hlp-page ul.gallery .thumb img {
 	border-radius: 4px;
@@ -1748,21 +1585,22 @@ html.hlp-void .hlp-page [bgcolor] a:not( .new ):not( .mw-selflink ) {
 .mw-widgets-datetime-calendarWidget,
 .mw-widgets-datetime-calendarWidget-cell,
 .mw-widgets-datetime-dateTimeInputWidget-editField {
-	background: var( --panel2 ) !important;
-	color: var( --text2 ) !important;
-	border-color: var( --line2 ) !important;
+	background: var( --hlp-panel-2 ) !important;
+	color: var( --hlp-text-2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
-.mw-widget-calendarWidget-day-heading {
+.mw-widget-calendarWidget-day-heading,
+.mw-widget-calendarWidget-day-additional {
 	background: transparent !important;
-	color: var( --muted ) !important;
+	color: var( --hlp-muted ) !important;
 }
 .mw-widget-calendarWidget-item:hover,
 .mw-widget-calendarWidget-item-selected,
 .mw-widgets-datetime-calendarWidget-selected {
-	background: var( --active ) !important;
+	background: var( --hlp-active ) !important;
 }
 .mw-widget-calendarWidget-item-selected {
-	box-shadow: 0 0 8px rgba( var( --glow ), 0.5 );
+	box-shadow: 0 0 8px rgba( var( --hlp-glow-rgb ), 0.5 );
 }
 .mw-widget-calendarWidget-prevButton .oo-ui-icon,
 .mw-widget-calendarWidget-nextButton .oo-ui-icon,
@@ -1776,13 +1614,13 @@ html.hlp-void .hlp-page [bgcolor] a:not( .new ):not( .mw-selflink ) {
 .hlp-page .mw-metadata td,
 .hlp-page .filehistory th,
 .hlp-page .filehistory td {
-	background: var( --panel );
-	color: var( --text );
-	border-color: var( --line );
+	background: var( --hlp-panel );
+	color: var( --hlp-text );
+	border-color: var( --hlp-line );
 }
 .hlp-page .mw-metadata th {
-	background: var( --active );
-	color: var( --text2 );
+	background: var( --hlp-active );
+	color: var( --hlp-text-2 );
 }
 .hlp-page table.mw-metadata {
 	border-collapse: separate;
@@ -1813,48 +1651,48 @@ html.hlp-void .hlp-page [bgcolor] a:not( .new ):not( .mw-selflink ) {
 .mw-notification,
 .oo-ui-window-body,
 .oo-ui-dialog-content {
-	background: var( --panel ) !important;
-	color: var( --text ) !important;
-	border-color: var( --line ) !important;
+	background: var( --hlp-panel ) !important;
+	color: var( --hlp-text ) !important;
+	border-color: var( --hlp-line ) !important;
 }
 .hlp-page .mw-htmlform-ooui tbody tr:hover td,
 .mw-rcfilters-ui-filterMenuOptionWidget.oo-ui-optionWidget-highlighted,
 .mw-rcfilters-ui-itemMenuOptionWidget:hover,
 .mw-rcfilters-ui-savedLinksListItemWidget:hover {
-	background: var( --active ) !important;
+	background: var( --hlp-active ) !important;
 }
 .hlp-page .searchresult,
 .hlp-page .mw-search-result-data {
-	color: var( --muted );
+	color: var( --hlp-muted );
 }
 .hlp-page figure > figcaption {
 	background: transparent;
-	color: var( --muted );
+	color: var( --hlp-muted );
 }
 
 /* File page metadata table: the real class is mw_metadata (underscore) */
 .hlp-page table.mw_metadata,
 .hlp-page .mw_metadata td,
 .hlp-page .mw_metadata th {
-	background: var( --panel ) !important;
-	color: var( --text ) !important;
-	border-color: var( --line ) !important;
+	background: var( --hlp-panel ) !important;
+	color: var( --hlp-text ) !important;
+	border-color: var( --hlp-line ) !important;
 }
 .hlp-page .mw_metadata th {
-	background: var( --active ) !important;
-	color: var( --text2 ) !important;
+	background: var( --hlp-active ) !important;
+	color: var( --hlp-text-2 ) !important;
 }
 .hlp-page table.mw_metadata {
 	border-collapse: separate;
 	border-spacing: 0;
 	border-radius: 8px;
 	overflow: hidden;
-	border: 1px solid var( --line2 ) !important;
+	border: 1px solid var( --hlp-line-2 ) !important;
 }
 
 /* Guide navigation boxes (e.g. fs2_open on Linux) use a pale khaki border */
 .hlp-page [style*="#C5C58B" i] {
-	border-color: var( --line2 ) !important;
+	border-color: var( --hlp-line-2 ) !important;
 }
 
 /* ---- Warning box (Template:Warning): stays red in both schemes, with a red glow ----
@@ -1902,7 +1740,7 @@ html.hlp-wide .hlp-main {
 .hlp-page .hlp-body :is( h1, h2, h3, h4, h5, h6 ),
 .hlp-page .hlp-body :is( h1, h2, h3, h4, h5, h6 ) .mw-headline,
 .hlp-page .hlp-body :is( h1, h2, h3, h4, h5, h6 ) span:not( .mw-editsection ):not( .mw-editsection-bracket ):not( .mw-editsection-divider ) {
-	color: var( --text2 ) !important;
+	color: var( --hlp-text-2 ) !important;
 }
 
 /* "This feature requires FreeSpace Open" notice (#251515 background): Void colours and breathing room */
@@ -1910,11 +1748,11 @@ html.hlp-void .hlp-page [style*="background-color:\20 #251515" i],
 html.hlp-void .hlp-page [style*="background-color:#251515" i],
 html.hlp-void .hlp-page [style*="background:\20 #251515" i],
 html.hlp-void .hlp-page [style*="background:#251515" i] {
-	background: var( --panel ) !important;
+	background: var( --hlp-panel ) !important;
 }
 html.hlp-void .hlp-page [style*="#251515" i][style*="#FFDDDD" i],
 html.hlp-void .hlp-page [style*="#251515" i][style*="#FFDDDD" i] * {
-	color: var( --text2 ) !important;
+	color: var( --hlp-text-2 ) !important;
 }
 .hlp-page [style*="#251515" i] {
 	margin-bottom: 1.5em !important;
@@ -1923,13 +1761,13 @@ html.hlp-void .hlp-page [style*="#251515" i][style*="#FFDDDD" i] * {
 /* ---- Special:AllMessages: default/current text cells (core uses light yellow/lilac) ---- */
 #mw-allmessagestable .am_default,
 #mw-allmessagestable tbody:hover .am_default {
-	background-color: var(--panel2) !important;
-	color: var(--text) !important;
+	background-color: var( --hlp-panel-2 ) !important;
+	color: var( --hlp-text ) !important;
 }
 #mw-allmessagestable .am_actual,
 #mw-allmessagestable tbody:hover .am_actual {
-	background-color: var(--active) !important;
-	color: var(--text2) !important;
+	background-color: var( --hlp-active ) !important;
+	color: var( --hlp-text-2 ) !important;
 }
 
 /* ---- Disabled OOUI widgets (e.g. Block: Pages/Namespaces while "Sitewide" is chosen) ---- */
@@ -1939,10 +1777,10 @@ html.hlp-void .hlp-page [style*="#251515" i][style*="#FFDDDD" i] * {
 .oo-ui-tagMultiselectWidget.oo-ui-widget-disabled,
 .oo-ui-widget-disabled.oo-ui-dropdownWidget .oo-ui-dropdownWidget-handle,
 .oo-ui-widget-disabled.oo-ui-textInputWidget .oo-ui-inputWidget-input {
-	background: var(--panel2) !important;
-	color: var(--muted) !important;
-	border-color: var(--line) !important;
-	opacity: .6;
+	background: var( --hlp-panel-2 ) !important;
+	color: var( --hlp-muted ) !important;
+	border-color: var( --hlp-line ) !important;
+	opacity: 0.6;
 }
 
 /* ---- Void: reddish-brown #301515 cells (Community Portal "Sites and Forums") ---- */
@@ -1951,8 +1789,8 @@ html.hlp-void .hlp-page [style*="background:#301515" i],
 html.hlp-void .hlp-page [style*="background-color:\20 #301515" i],
 html.hlp-void .hlp-page [style*="background-color:#301515" i],
 html.hlp-void .hlp-page [bgcolor="#301515" i] {
-	background: var( --panel2 ) !important;
-	color: var( --text2 ) !important;
+	background: var( --hlp-panel-2 ) !important;
+	color: var( --hlp-text-2 ) !important;
 }
 
 /* ---- Void: ship/infobox header (#603030) and red border (#A6110D) ---- */
@@ -1961,17 +1799,17 @@ html.hlp-void .hlp-page [style*="background-color:#603030" i],
 html.hlp-void .hlp-page [style*="background:\20 #603030" i],
 html.hlp-void .hlp-page [style*="background:#603030" i],
 html.hlp-void .hlp-page [bgcolor="#603030" i] {
-	background: var( --active ) !important;
+	background: var( --hlp-active ) !important;
 }
 html.hlp-void .hlp-page [style*="#A6110D" i] {
-	border-color: var( --line2 ) !important;
-	box-shadow: 0 0 10px rgba( var( --glow ), .35 );
+	border-color: var( --hlp-line-2 ) !important;
+	box-shadow: 0 0 10px rgba( var( --hlp-glow-rgb ), 0.35 );
 }
 
 /* Void: title text inside the #603030 header (inline gold) uses the light theme colour */
 html.hlp-void .hlp-page :is( [style*="#603030" i], [bgcolor="#603030" i] ),
 html.hlp-void .hlp-page :is( [style*="#603030" i], [bgcolor="#603030" i] ) :is( *, font[color] ) {
-	color: var( --text2 ) !important;
+	color: var( --hlp-text-2 ) !important;
 }
 
 /* ---- No layout jump when the TOC moves to the side panel ----
@@ -1994,32 +1832,18 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 	background: transparent !important;
 }
 
-/* Framed images ([[File:...|frame]]) get the same rounded corners as thumbnails */
-.hlp-page figure[typeof~='mw:File/Frame'],
-.hlp-page figure[typeof~='mw:File/Thumb'] {
-	border-radius: 8px;
-	overflow: hidden;
-}
-
 /* One closed rounded frame around image + caption.
  * Core draws the figure border without a bottom edge and gives the caption its own
- * border, which breaks the rounded corners; here the figure owns the whole frame. */
+ * border, which breaks the rounded corners; here the figure owns the whole frame.
+ * Core also shows figures as display:table, which puts the caption (table-caption) OUTSIDE
+ * the border box; as a normal block the frame encloses image and caption. */
 .hlp-page figure[typeof~='mw:File/Thumb'],
 .hlp-page figure[typeof~='mw:File/Frame'] {
-	border: 1px solid var( --line2 ) !important;
+	border: 1px solid var( --hlp-line-2 ) !important;
 	border-radius: 10px;
 	overflow: hidden;
-	background: var( --panel );
-}
-.hlp-page figure[typeof~='mw:File/Thumb'] > figcaption,
-.hlp-page figure[typeof~='mw:File/Frame'] > figcaption {
-	border: 0 !important;
-}
-
-/* Core shows figures as display:table, which puts the caption (table-caption) OUTSIDE the
- * border box. As a normal block the frame encloses image and caption. */
-.hlp-page figure[typeof~='mw:File/Thumb'],
-.hlp-page figure[typeof~='mw:File/Frame'] {
+	background: var( --hlp-panel );
+	color: var( --hlp-text );
 	display: block;
 	width: fit-content;
 	max-width: 100%;
@@ -2027,6 +1851,9 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 }
 .hlp-page figure[typeof~='mw:File/Thumb'] > figcaption,
 .hlp-page figure[typeof~='mw:File/Frame'] > figcaption {
+	border: 0 !important;
+	background: transparent;
+	color: var( --hlp-muted );
 	display: block;
 	padding: 3px 8px 6px;
 }

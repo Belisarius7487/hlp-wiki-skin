@@ -11,6 +11,8 @@ Small custom skin for the FreeSpace Wiki, built on MediaWiki's standard `SkinMus
 - Only the standard Mustache data keys are used (`html-body-content`, `data-portlets`, `data-search-box`, `data-footer`, ...).
 - No custom PHP code.
 - The table of contents is moved by `main.js`; if MediaWiki changes its markup, the TOC just stays inside the article.
+- Interface texts (menu and button labels) are MediaWiki messages in `i18n/` (prefix `hlpfire-`), so wiki admins can change them on the page `MediaWiki:<message-name>`.
+- All CSS colour variables start with `--hlp-` so they cannot clash with gadgets or `MediaWiki:Common.css`.
 
 ## Before every MediaWiki update
 

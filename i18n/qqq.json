@@ -1,7 +1,18 @@
 {
-	"@metadata": {
-		"authors": [ "HLP" ]
-	},
-	"skinname-hlpfire": "Name of the skin, shown in preferences",
-	"hlpfire-desc": "Short description of the skin"
+    "@metadata": {
+        "authors": [
+            "HLP"
+        ]
+    },
+    "skinname-hlpfire": "HLP Fire",
+    "hlpfire-desc": "HLP Fire / Void colour skin for the FreeSpace Wiki",
+    "hlpfire-nav-label": "Site",
+    "hlpfire-menu-tools": "Tools",
+    "hlpfire-menu-more": "More",
+    "hlpfire-scheme-fire": "Theme: Fire",
+    "hlpfire-scheme-void": "Theme: Void",
+    "hlpfire-scheme-switch-tooltip": "Switch colour scheme",
+    "hlpfire-layout-normal": "Layout: Normal",
+    "hlpfire-layout-wide": "Layout: Wide",
+    "hlpfire-layout-switch-tooltip": "Switch page width"
 }
