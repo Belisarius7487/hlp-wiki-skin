@@ -1954,3 +1954,16 @@ html.hlp-void .hlp-page [bgcolor="#301515" i] {
 	background: var( --panel2 ) !important;
 	color: var( --text2 ) !important;
 }
+
+/* ---- Void: ship/infobox header (#603030) and red border (#A6110D) ---- */
+html.hlp-void .hlp-page [style*="background-color:\20 #603030" i],
+html.hlp-void .hlp-page [style*="background-color:#603030" i],
+html.hlp-void .hlp-page [style*="background:\20 #603030" i],
+html.hlp-void .hlp-page [style*="background:#603030" i],
+html.hlp-void .hlp-page [bgcolor="#603030" i] {
+	background: var( --active ) !important;
+}
+html.hlp-void .hlp-page [style*="#A6110D" i] {
+	border-color: var( --line2 ) !important;
+	box-shadow: 0 0 10px rgba( var( --glow ), .35 );
+}
