@@ -1988,3 +1988,8 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 		display: none;
 	}
 }
+
+/* Canon notice tables: the inner header cell has its own black fill, let the card show through */
+.hlp-page table[style*="1px #000" i][cellspacing="10"] :is( th, td ) {
+	background: transparent !important;
+}
