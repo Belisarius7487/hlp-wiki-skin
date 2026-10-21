@@ -2030,3 +2030,8 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 	display: block;
 	padding: 3px 8px 6px;
 }
+
+/* Non-canon banner (red-bordered, centred table at the top of a page): space below it */
+.hlp-page table[cellpadding="10"][style*="AA2020" i] {
+	margin-bottom: 1.5em !important;
+}
