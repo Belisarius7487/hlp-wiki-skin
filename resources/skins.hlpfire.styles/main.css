@@ -2015,3 +2015,18 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 .hlp-page figure[typeof~='mw:File/Frame'] > figcaption {
 	border: 0 !important;
 }
+
+/* Core shows figures as display:table, which puts the caption (table-caption) OUTSIDE the
+ * border box. As a normal block the frame encloses image and caption. */
+.hlp-page figure[typeof~='mw:File/Thumb'],
+.hlp-page figure[typeof~='mw:File/Frame'] {
+	display: block;
+	width: fit-content;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+.hlp-page figure[typeof~='mw:File/Thumb'] > figcaption,
+.hlp-page figure[typeof~='mw:File/Frame'] > figcaption {
+	display: block;
+	padding: 3px 8px 6px;
+}
