@@ -1919,3 +1919,28 @@ html.hlp-void .hlp-page [style*="#251515" i][style*="#FFDDDD" i] * {
 .hlp-page [style*="#251515" i] {
 	margin-bottom: 1.5em !important;
 }
+
+/* ---- Special:AllMessages: default/current text cells (core uses light yellow/lilac) ---- */
+#mw-allmessagestable .am_default,
+#mw-allmessagestable tbody:hover .am_default {
+	background-color: var(--panel2) !important;
+	color: var(--text) !important;
+}
+#mw-allmessagestable .am_actual,
+#mw-allmessagestable tbody:hover .am_actual {
+	background-color: var(--active) !important;
+	color: var(--text2) !important;
+}
+
+/* ---- Disabled OOUI widgets (e.g. Block: Pages/Namespaces while "Sitewide" is chosen) ---- */
+.oo-ui-widget-disabled .oo-ui-inputWidget-input,
+.oo-ui-widget-disabled .oo-ui-tagMultiselectWidget-handle,
+.oo-ui-tagMultiselectWidget.oo-ui-widget-disabled .oo-ui-tagMultiselectWidget-handle,
+.oo-ui-tagMultiselectWidget.oo-ui-widget-disabled,
+.oo-ui-widget-disabled.oo-ui-dropdownWidget .oo-ui-dropdownWidget-handle,
+.oo-ui-widget-disabled.oo-ui-textInputWidget .oo-ui-inputWidget-input {
+	background: var(--panel2) !important;
+	color: var(--muted) !important;
+	border-color: var(--line) !important;
+	opacity: .6;
+}
