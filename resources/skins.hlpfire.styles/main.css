@@ -1993,3 +1993,10 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 .hlp-page table[style*="1px #000" i][cellspacing="10"] :is( th, td ) {
 	background: transparent !important;
 }
+
+/* Framed images ([[File:...|frame]]) get the same rounded corners as thumbnails */
+.hlp-page figure[typeof~='mw:File/Frame'],
+.hlp-page figure[typeof~='mw:File/Thumb'] {
+	border-radius: 8px;
+	overflow: hidden;
+}
