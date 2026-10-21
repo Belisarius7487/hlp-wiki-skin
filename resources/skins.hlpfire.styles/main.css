@@ -1944,3 +1944,13 @@ html.hlp-void .hlp-page [style*="#251515" i][style*="#FFDDDD" i] * {
 	border-color: var(--line) !important;
 	opacity: .6;
 }
+
+/* ---- Void: reddish-brown #301515 cells (Community Portal "Sites and Forums") ---- */
+html.hlp-void .hlp-page [style*="background:\20 #301515" i],
+html.hlp-void .hlp-page [style*="background:#301515" i],
+html.hlp-void .hlp-page [style*="background-color:\20 #301515" i],
+html.hlp-void .hlp-page [style*="background-color:#301515" i],
+html.hlp-void .hlp-page [bgcolor="#301515" i] {
+	background: var( --panel2 ) !important;
+	color: var( --text2 ) !important;
+}
