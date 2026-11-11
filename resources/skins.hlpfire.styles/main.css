@@ -1932,3 +1932,38 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 		width: auto !important;
 	}
 }
+
+/* ---- "List of Tables and related code files" box (Template:Tables): follows the reader ----
+ * On wide article columns the box stays at the right edge while scrolling, like the TOC,
+ * with its own scrollbar. The whole text column gets a right padding so no text, notice
+ * or image ever runs under the box. Recognised by the "Tables" link in its first header
+ * row, so neither the template nor the articles need changes. Narrow columns: unchanged. */
+@container hlp-main ( min-width: 1000px ) {
+	.hlp-body .mw-parser-output:has( > table > tbody > tr:first-child th a[title='Tables'] ) {
+		padding-right: 444px;
+	}
+
+	.hlp-body .mw-parser-output > table:has( > tbody > tr:first-child th a[title='Tables'] ) {
+		position: sticky;
+		top: 16px;
+		float: right;
+		clear: right;
+		display: block;
+		box-sizing: border-box;
+		width: 420px;
+		max-height: calc( 100vh - 32px );
+		margin: 0 -444px 1em 24px !important;
+		overflow-x: hidden !important;
+		overflow-y: auto !important;
+		font-size: 13px !important;
+	}
+
+	.hlp-body .mw-parser-output > table:has( > tbody > tr:first-child th a[title='Tables'] ) > tbody {
+		display: table;
+		width: 100%;
+	}
+
+	.hlp-body .mw-parser-output > table:has( > tbody > tr:first-child th a[title='Tables'] ) td {
+		overflow-wrap: anywhere;
+	}
+}
