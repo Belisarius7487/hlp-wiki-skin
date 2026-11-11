@@ -1,9 +1,9 @@
 {
 	"name": "HLPFire",
 	"author": [
-		"HLP"
+		"Belisarius"
 	],
-	"url": "https://wiki.hard-light.net",
+	"url": "https://github.com/Belisarius7487/hlp-wiki-skin",
 	"descriptionmsg": "hlpfire-desc",
 	"namemsg": "skinname-hlpfire",
 	"license-name": "GPL-2.0-or-later",
