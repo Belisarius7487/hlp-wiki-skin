@@ -1931,6 +1931,15 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 	.hlp-body .mw-parser-output :is( td, th )[style*="width" i] {
 		width: auto !important;
 	}
+
+	/* Recent changes / watchlist: core floats the abbreviation legend to the right. On narrow
+	 * columns it squeezed the date headings into one letter per line and pushed the change
+	 * lists (scroll areas avoid floats) far to the right. Here it sits above the list instead. */
+	.hlp-body .mw-changeslist-legend {
+		float: none;
+		width: auto;
+		margin: 0 0 1em;
+	}
 }
 
 /* ---- "List of Tables and related code files" box (Template:Tables): follows the reader ----
