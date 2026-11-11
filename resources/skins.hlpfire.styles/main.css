@@ -294,7 +294,7 @@ img {
 }
 
 .hlp-aside:not( [hidden] ) {
-	flex: 1 1 240px;
+	flex: 1 1 300px;
 	max-width: 320px;
 	min-width: 220px;
 	position: sticky;
@@ -486,6 +486,11 @@ input[type='submit'],
 .hlp-aside #toc,
 .hlp-aside #mw-toc,
 .hlp-aside .toc {
+	/* Block instead of core's display:table, so long headings wrap instead of widening the page */
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	overflow-wrap: anywhere;
 	background: var( --hlp-panel );
 	border: 1px solid rgba( var( --hlp-glow-rgb ), 0.35 );
 	border-top: 3px solid var( --hlp-accent );
@@ -604,6 +609,14 @@ input[type='submit'],
 
 	.hlp-nav > ul {
 		flex-wrap: wrap;
+	}
+
+	/* The Tools menu sits at the right edge on small screens: open it towards the left */
+	.hlp-nav .hlp-menu-panel {
+		left: auto;
+		right: 0;
+		max-width: calc( 100vw - 32px );
+		box-sizing: border-box;
 	}
 }
 
@@ -1819,7 +1832,7 @@ html.hlp-void .hlp-page :is( [style*="#603030" i], [bgcolor="#603030" i] ) :is( 
  * keeps its width while main.js is still loading. main.js only fills the panel. */
 html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-aside[hidden] {
 	display: block;
-	flex: 1 1 240px;
+	flex: 1 1 300px;
 	max-width: 320px;
 	min-width: 220px;
 }
@@ -1873,9 +1886,17 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
  * Here every top-level table becomes its own horizontal scroll area, and floated boxes
  * (navigation boxes, infoboxes) take the full width instead of squeezing the text beside them. */
 @container hlp-main ( max-width: 800px ) {
+	.hlp-body .mw-parser-output {
+		overflow-wrap: break-word;
+	}
+
+	/* Top-level tables use the full column width, even with a fixed width from the template
+	 * (e.g. width:500px or width="20%"); content that is still wider scrolls sideways. */
 	.hlp-body .mw-parser-output table:not( table table ):not( :has( > thead ) ) {
 		display: block;
+		width: 100% !important;
 		max-width: 100%;
+		box-sizing: border-box;
 		overflow-x: auto !important;
 		-webkit-overflow-scrolling: touch;
 	}
@@ -1894,5 +1915,20 @@ html.hlp-js .hlp-wrap:has( #bodyContent :is( #toc, #mw-toc, .toc ) ) > .hlp-asid
 		margin-left: 0 !important;
 		margin-right: 0 !important;
 		box-sizing: border-box;
+	}
+
+	/* Large side padding from templates (e.g. "requires FreeSpace Open" notice: 10em) */
+	.hlp-body .mw-parser-output table:not( table table )[style*="padding" i] {
+		padding-left: 8px !important;
+		padding-right: 8px !important;
+	}
+
+	/* Cells with a fixed width or nowrap from the template may wrap on narrow screens */
+	.hlp-body .mw-parser-output :is( td, th )[style*="nowrap" i] {
+		white-space: normal !important;
+	}
+
+	.hlp-body .mw-parser-output :is( td, th )[style*="width" i] {
+		width: auto !important;
 	}
 }
