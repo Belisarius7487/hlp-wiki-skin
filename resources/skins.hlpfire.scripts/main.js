@@ -52,37 +52,15 @@
 		aside.hidden = false;
 	}
 
-	// The "List of Tables" box (Template:Tables) follows the reader on wide article columns
-	// (see main.css). Templates place it below the revision notes, which left an empty gap
-	// above it; on wide columns it is moved to the top of the article, and back again when
-	// the column gets narrow. If nothing is found, the box simply stays where it is.
+	// The "List of Tables" box: placed by window.hlpPlaceTablesList (templates/skin.mustache)
+	// right after the article HTML; here it is re-placed when the article column changes width.
 	function setupTablesList() {
-		var po = document.querySelector( '#bodyContent .mw-parser-output' );
 		var main = document.querySelector( '.hlp-main' );
-		var box, marker, moved = false;
-		if ( !po || !main || !window.ResizeObserver ) {
+		if ( !main || !window.ResizeObserver || !window.hlpPlaceTablesList ) {
 			return;
 		}
-		box = Array.prototype.find.call( po.children, function ( el ) {
-			var th = el.tagName === 'TABLE' && el.querySelector( ':scope > tbody > tr:first-child th' );
-			return th && ( th.querySelector( 'a[title="Tables"]' ) ||
-				( document.body.classList.contains( 'page-Tables' ) && th.querySelector( 'a.mw-selflink' ) ) );
-		} );
-		if ( !box || box === po.firstElementChild ) {
-			return;
-		}
-		marker = document.createComment( 'hlp-tables-list' );
-		box.parentNode.insertBefore( marker, box );
 		new ResizeObserver( function () {
-			// Same threshold as the @container rule in main.css
-			var wide = main.clientWidth >= 1000;
-			if ( wide && !moved ) {
-				po.insertBefore( box, po.firstChild );
-				moved = true;
-			} else if ( !wide && moved ) {
-				marker.parentNode.insertBefore( box, marker );
-				moved = false;
-			}
+			window.hlpPlaceTablesList();
 		} ).observe( main );
 	}
 

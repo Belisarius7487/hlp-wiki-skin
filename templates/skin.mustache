@@ -7,6 +7,32 @@
 document.documentElement.classList.add( 'hlp-js' );
 try { if ( localStorage.getItem( 'hlp-wiki-scheme' ) === 'void' ) { document.documentElement.classList.add( 'hlp-void' ); } } catch ( e ) {}
 try { if ( localStorage.getItem( 'hlp-wiki-layout' ) === 'wide' ) { document.documentElement.classList.add( 'hlp-wide' ); } } catch ( e ) {}
+/* The "List of Tables" box (Template:Tables) moves to the top of wide articles, see main.css.
+ * Called right after the article HTML (no visible jump) and again by main.js on resize. */
+window.hlpPlaceTablesList = function () {
+	var po = document.querySelector( '#bodyContent .mw-parser-output' );
+	var main = document.querySelector( '.hlp-main' );
+	var s = window.hlpPlaceTablesList, box, th, i;
+	if ( !po || !main ) { return; }
+	if ( !s.box ) {
+		for ( i = 0; i < po.children.length && !s.box; i++ ) {
+			th = po.children[ i ].tagName === 'TABLE' && po.children[ i ].querySelector( 'tr:first-child th' );
+			if ( th && ( th.querySelector( 'a[title="Tables"]' ) || ( /(^| )page-Tables( |$)/.test( document.body.className ) && th.querySelector( 'a.mw-selflink' ) ) ) ) {
+				s.box = po.children[ i ];
+			}
+		}
+		if ( !s.box || s.box === po.firstElementChild ) { s.box = null; return; }
+		s.marker = document.createComment( 'hlp-tables-list' );
+		s.box.parentNode.insertBefore( s.marker, s.box );
+	}
+	box = s.box;
+	/* Same threshold as the @container rule in main.css */
+	if ( main.clientWidth >= 1000 ) {
+		if ( box !== po.firstElementChild ) { po.insertBefore( box, po.firstChild ); }
+	} else if ( box.previousSibling !== s.marker ) {
+		s.marker.parentNode.insertBefore( box, s.marker.nextSibling );
+	}
+};
 </script>
 <div class="hlp-page">
 	<header class="hlp-header">
@@ -63,6 +89,7 @@ try { if ( localStorage.getItem( 'hlp-wiki-layout' ) === 'wide' ) { document.doc
 				{{#html-undelete-link}}<div id="contentSub2">{{{.}}}</div>{{/html-undelete-link}}
 				{{{html-user-message}}}
 				{{{html-body-content}}}
+				<script>try { window.hlpPlaceTablesList(); } catch ( e ) {}</script>
 				{{{html-categories}}}
 			</div>
 			{{{html-after-content}}}
