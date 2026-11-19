@@ -1772,6 +1772,11 @@ html.hlp-void .hlp-page [style*="#251515" i][style*="#FFDDDD" i] * {
 .hlp-page [style*="#251515" i] {
 	margin-bottom: 1.5em !important;
 }
+/* The notice template has 10em side padding (240px at its font size): on narrower text
+ * columns (e.g. next to the Tables list) the sentence broke into one word per line */
+.hlp-page table[style*="#251515" i][style*="padding" i] {
+	padding: 0.4em 1em !important;
+}
 
 /* ---- Special:AllMessages: default/current text cells (core uses light yellow/lilac) ---- */
 #mw-allmessagestable .am_default,
